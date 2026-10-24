@@ -1,0 +1,26 @@
+:root {
+  --olfu-green: #2e7d32;
+  --olfu-green-dark: #1b5e20;
+  --panel-bg: rgba(255, 255, 255, 0.94);
+}
+
+html, body, #root { height: 100%; margin: 0; }
+
+.app-nav {
+  background: var(--olfu-green);
+  color: #fff;
+  height: 56px;
+  flex: 0 0 auto;
+}
+.app-nav .brand { font-weight: 700; letter-spacing: 0.02em; }
+
+.stage {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.pano {
+  position: absolute;
+  inset: 0;
+}

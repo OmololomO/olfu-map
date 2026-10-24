@@ -1,0 +1,17 @@
+/* Move all controls to the top right corner */
+.pnlm-controls-container {
+    top: 10px !important;
+    right: 10px !important;
+    left: auto !important; /* Reset default left position */
+}
+
+/* Specifically target only the zoom controls if needed */
+.pnlm-zoom-controls {
+    /* Adjust margin, layout, or float if positioning individually */
+    margin-bottom: 5px;
+}
+
+/* Hide Pannellum's default native title text overlay */
+.pnlm-title-box {
+    display: none !important;
+}

@@ -3,6 +3,9 @@ const scenes = {
     title: "Main Gate",                 // Name of place
     type: "equirectangular",            // Type of Image(Do not Change)
     panorama: "/panoramas/test.jpg",    // Image path
+    description: [                      // Description of place
+      "The description of the place goes here."
+    ], 
     hotSpots: [                         // Buttons That Go To Other Panoramas
       {
         pitch: -5,                      // x-axis
