@@ -1,6 +1,7 @@
 import { useState } from "react";
 import PanoViewer from "./components/PanoViewer";
 import InfoCard from "./components/InfoCard";
+import MiniMap from "./components/MiniMap";
 import scenes from "./data/scenes";
 import "./App.css";
 
@@ -21,6 +22,7 @@ function App() {
           <PanoViewer sceneId={sceneId} onSceneChange={setSceneId} />
         </div>
         <InfoCard scene={scenes[sceneId]} />
+        <MiniMap scenes={scenes} activeId={sceneId} onPinClick={setSceneId} />
       </main>
     </div>
   );

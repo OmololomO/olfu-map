@@ -9,9 +9,25 @@
 .pnlm-zoom-controls {
     /* Adjust margin, layout, or float if positioning individually */
     margin-bottom: 5px;
+    scale: 1.3;
 }
 
 /* Hide Pannellum's default native title text overlay */
 .pnlm-title-box {
     display: none !important;
+}
+
+
+.pano-viewer { position: relative; width: 100%; height: 100%; }
+
+.pano-zoom {
+  position: absolute; top: 12px; right: 12px; z-index: 10;
+  display: flex; flex-direction: column; gap: 4px;
+}
+.pano-zoom button {
+  width: 32px; height: 32px; padding: 0;
+  border: 0; border-radius: 6px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  font-size: 1.1rem; line-height: 1;
 }

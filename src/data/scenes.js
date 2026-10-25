@@ -6,6 +6,7 @@ const scenes = {
     description: [                      // Description of place
       "The description of the place goes here."
     ], 
+    map: { x: 10, y: 25 }, 
     hotSpots: [                         // Buttons That Go To Other Panoramas
       {
         pitch: -5,                      // x-axis
@@ -21,6 +22,10 @@ const scenes = {
     title: "Quadrangle",
     type: "equirectangular",
     panorama: "/panoramas/test2.jpg",
+    description: [                      // Description of place
+      ""
+    ], 
+    map: { x: 10, y: 10 }, 
     hotSpots: [
       {
         pitch: -5,

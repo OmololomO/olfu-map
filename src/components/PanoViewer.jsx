@@ -13,7 +13,7 @@ export default function PanoViewer({ sceneId, onSceneChange }) {
         firstScene: sceneId,
         sceneFadeDuration: 800,
         autoLoad: true,
-        showZoomCtrl: true,
+        showZoomCtrl: false,
         showFullscreenCtrl: false,
       },
       scenes,
@@ -21,7 +21,7 @@ export default function PanoViewer({ sceneId, onSceneChange }) {
     viewer.on("scenechange", onSceneChange);
     viewer.on("error", (msg) => console.error("Pannellum error:", msg));
     viewerRef.current = viewer;
-    return () => viewer.destroy();
+    return () => viewer.destroy();  
   }, []);
 
   useEffect(() => {
@@ -31,5 +31,21 @@ export default function PanoViewer({ sceneId, onSceneChange }) {
     }
   }, [sceneId]);
 
-  return <div ref={containerRef} style={{ width: "100%", height: "100%" }} />;
+  function zoomBy(delta) {
+    const viewer = viewerRef.current;
+    if (viewer) viewer.setHfov(viewer.getHfov() + delta, 300);
+  }
+
+
+  return (
+    <div className="pano-viewer">
+      <div className="pano-zoom">
+        <button onClick={() => zoomBy(-15)} aria-label="Zoom in">+</button>
+        <button onClick={() => zoomBy(15)} aria-label="Zoom out">−</button>
+      </div>
+      
+      <div ref={containerRef} style={{ width: "100%", height: "100%" }} />
+    </div>
+  );
+
 }

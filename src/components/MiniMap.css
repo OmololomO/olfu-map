@@ -1,0 +1,53 @@
+.minimap {
+  position: absolute; left: 12px; bottom: 12px;
+  width: 300px;
+  background: #fff;
+  border: 3px solid #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+  transition: width 0.2s ease;
+  z-index: 5;
+}
+.minimap.expanded { width: min(90vw, 640px); }
+.minimap-inner { position: relative; }
+ 
+/* The window you look through; the map moves inside it */
+.minimap-viewport {
+  position: relative;
+  overflow: hidden;
+  touch-action: none;   /* stops the browser scrolling/zooming the page while you drag the map */
+  cursor: grab;
+  user-select: none;
+}
+.minimap-viewport:active { cursor: grabbing; }
+.minimap-content { transform-origin: 0 0; will-change: transform; }
+.minimap img { display: block; width: 100%; }
+ 
+/* Buttons that sit on top of the map */
+.minimap-toggle,
+.minimap-zoom button {
+  width: 28px; height: 28px; padding: 0;
+  border: 0; border-radius: 6px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  line-height: 1;
+}
+.minimap-toggle { position: absolute; top: 4px; right: 4px; }
+.minimap-zoom {
+  position: absolute; right: 4px; bottom: 4px;
+  display: flex; flex-direction: column; gap: 4px;
+}
+ 
+/* Pins */
+.pin {
+  position: absolute;
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background: #1565c0;
+  padding: 0;
+}
+.pin.active { background: var(--olfu-green); width: 16px; height: 16px; }
+.minimap-pins { position: absolute; inset: 0; pointer-events: none; }
+.minimap-pins .pin { pointer-events: auto; transform: translate(-50%, -50%); }
