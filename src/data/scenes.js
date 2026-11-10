@@ -6,23 +6,23 @@ const scenes = {
     description: [                      // Description of place
       "The description of the place goes here."
     ], 
-    map: { x: 10, y: 25 }, 
+    map: { x: 10, y: 25 },              // Pin Position On The Map 
     hotSpots: [                         // Buttons That Go To Other Panoramas
       {
         pitch: -5,                      // x-axis
         yaw: 90,                        // y-axis
         type: "scene",                  
-        text: "Go to Quadrangle",       // Text To Show On Button Focused
-        sceneId: "quad",                // Panorama To Go To
+        text: "Go to Path",       // Text To Show On Button Focused
+        sceneId: "path",                // Panorama To Go To
       },
     ],
   },
 
-  quad: {
-    title: "Quadrangle",
+  path: {
+    title: "Path",
     type: "equirectangular",
     panorama: "/panoramas/test2.jpg",
-    description: [                      // Description of place
+    description: [                      
       ""
     ], 
     map: { x: 10, y: 10 }, 
@@ -31,7 +31,7 @@ const scenes = {
         pitch: -5,
         yaw: -90,
         type: "scene",
-        text: "Back to Gate",
+        text: "Main Gate",
         sceneId: "gate",
       },
     ],

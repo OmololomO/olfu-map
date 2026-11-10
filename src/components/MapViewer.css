@@ -1,0 +1,27 @@
+/* Fills the .stage area, same as the panorama does */
+.map-viewer {
+  position: absolute; inset: 0;
+  background: #fff;
+}
+.map-viewport {
+  position: absolute; inset: 0;
+  overflow: hidden;
+  user-select: none;
+}
+
+/* The map: as wide as the screen on a phone, but capped on big screens
+   (the extra space on the sides stays white). Change 720px to resize it. */
+.map-content { position: absolute; top: 0; left: 0; width: min(100%, 720px); transform-origin: 0 0; }
+.map-content img { display: block; width: 100%; }
+
+.map-zoom {
+  position: absolute; top: 12px; right: 12px; z-index: 10;
+  display: flex; flex-direction: column; gap: 4px;
+}
+.map-zoom button {
+  width: 32px; height: 32px; padding: 0;
+  border: 0; border-radius: 6px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  font-size: 1.1rem; line-height: 1;
+}

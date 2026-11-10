@@ -40,8 +40,8 @@ export default function PanoViewer({ sceneId, onSceneChange }) {
   return (
     <div className="pano-viewer">
       <div className="pano-zoom">
-        <button onClick={() => zoomBy(-15)} aria-label="Zoom in">+</button>
-        <button onClick={() => zoomBy(15)} aria-label="Zoom out">−</button>
+        <button onClick={() => zoomBy(-15)}>+</button>
+        <button onClick={() => zoomBy(15)}>−</button>
       </div>
       
       <div ref={containerRef} style={{ width: "100%", height: "100%" }} />
