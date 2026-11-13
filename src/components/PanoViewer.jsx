@@ -15,6 +15,7 @@ export default function PanoViewer({ sceneId, onSceneChange }) {
         autoLoad: true,
         showZoomCtrl: false,
         showFullscreenCtrl: false,
+        hotSpotDebug: true,
       },
       scenes,
     });

@@ -8,7 +8,7 @@ import "./App.css";
 import { ButtonGroup, Button } from "react-bootstrap";
 
 function App() {
-  const [sceneId, setSceneId] = useState("gate");
+  const [sceneId, setSceneId] = useState("B2-F1-FAC-01");
   const [view, setView] = useState("map"); // "tour" or "map"
 
 

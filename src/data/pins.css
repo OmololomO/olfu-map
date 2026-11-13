@@ -1,0 +1,32 @@
+/* Base Pin Looks */
+.custom-pin {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+  
+  background-image: none;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+
+/* Individual Pin Looks */
+.door {
+    
+    background-color: #ffffff; 
+    background-image: url('/public/pin_icons/enter_door.png');
+    background-size: 60%;   
+}
+
+.move {
+    --oval-y: 150px;
+
+    background-color: #ffffff; 
+    background-image: url('/public/pin_icons/move.png');
+    background-size: 60%;   
+}
