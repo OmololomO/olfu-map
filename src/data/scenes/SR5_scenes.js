@@ -30,7 +30,7 @@ const scenes = {
       {
         type: "scene",
         text: "Exit SR5",
-        cssClass: "custom-pin door",
+        cssClass: "hotspot-pin door",
         pitch: -2,
         yaw: -4.5,
         sceneId: "AAAA",

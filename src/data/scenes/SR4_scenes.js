@@ -30,7 +30,7 @@ const scenes = {
       {
         type: "scene",
         text: "Move",
-        cssClass: "custom-pin move",
+        cssClass: "hotspot-pin move",
         pitch: -8,
         yaw: -145.5,
         sceneId: "S42",
@@ -40,7 +40,7 @@ const scenes = {
       {
         type: "scene",
         text: "Exit Library",
-        cssClass: "custom-pin door",
+        cssClass: "hotspot-pin door",
         pitch: -3.5,
         yaw: 63.6,
         sceneId: "S43",
@@ -50,7 +50,7 @@ const scenes = {
       {
         type: "scene",
         text: "Exit Library/SR4",
-        cssClass: "custom-pin door",
+        cssClass: "hotspot-pin door",
         pitch: -2,
         yaw: -94.5,
         sceneId: "S42",
@@ -72,7 +72,7 @@ const scenes = {
       {
         type: "scene",
         text: "Move",
-        cssClass: "custom-pin move",
+        cssClass: "hotspot-pin move",
         pitch: -12,
         yaw: 31.7,
         sceneId: "S41",
@@ -82,7 +82,7 @@ const scenes = {
       {
         type: "scene",
         text: "Exit Library",
-        cssClass: "custom-pin door",
+        cssClass: "hotspot-pin door",
         pitch: -2,
         yaw: 43,
         sceneId: "S43",
@@ -92,7 +92,7 @@ const scenes = {
       {
         type: "scene",
         text: "Exit Library/SR4",
-        cssClass: "custom-pin door",
+        cssClass: "hotspot-pin door",
         pitch: -1,
         yaw: -49,
         sceneId: "S41",
@@ -114,7 +114,7 @@ const scenes = {
       {
         type: "scene",
         text: "Enter Library",
-        cssClass: "custom-pin door",
+        cssClass: "hotspot-pin door",
         pitch: -2,
         yaw: -88.7,
         sceneId: "S41",
@@ -124,7 +124,7 @@ const scenes = {
       {
         type: "scene",
         text: "Exit SR4",
-        cssClass: "custom-pin door",
+        cssClass: "hotspot-pin door",
         pitch: -2.5,
         yaw: 36,
         sceneId: "AAAA",
@@ -134,7 +134,7 @@ const scenes = {
       {
         type: "scene",
         text: "Exit SR4",
-        cssClass: "custom-pin door",
+        cssClass: "hotspot-pin door",
         pitch: -5,
         yaw: -39,
         sceneId: "AAAA",

@@ -1,4 +1,4 @@
-.custom-pin {
+.hotspot-pin {
   width: 35px;
   height: 35px;
   border-radius: 50%;
@@ -9,7 +9,7 @@
 }
 
 /* Inner Icon Layer */
-.custom-pin::before {
+.hotspot-pin::before {
   content: "";
   position: absolute;
   inset: 0;

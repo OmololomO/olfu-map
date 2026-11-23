@@ -22,3 +22,7 @@
   white-space: nowrap;
   pointer-events: none;
 }
+
+.pin:hover {
+  width: 18px; height: 18px;
+}

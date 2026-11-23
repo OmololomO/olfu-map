@@ -30,7 +30,7 @@ const scenes = {
       {
         type: "scene",
         text: "Exit SR1",
-        cssClass: "custom-pin door",
+        cssClass: "hotspot-pin door",
         pitch: 0,
         yaw: 356,
         sceneId: "S1D",
@@ -40,7 +40,7 @@ const scenes = {
       {
         type: "scene",
         text: "Move",
-        cssClass: "custom-pin move",
+        cssClass: "hotspot-pin move",
         pitch: -5,
         yaw: 179,
         sceneId: "S1B",
@@ -62,7 +62,7 @@ const scenes = {
       {
         type: "scene",
         text: "Move",
-        cssClass: "custom-pin move",
+        cssClass: "hotspot-pin move",
         pitch: -0.5,
         yaw: 1.5,
         sceneId: "S1A",
@@ -72,7 +72,7 @@ const scenes = {
       {
         type: "scene",
         text: "Move",
-        cssClass: "custom-pin move",
+        cssClass: "hotspot-pin move",
         pitch: -3,
         yaw: -84,
         sceneId: "S1C",
@@ -82,7 +82,7 @@ const scenes = {
       {
         type: "scene",
         text: "Exit SR1",
-        cssClass: "custom-pin door",
+        cssClass: "hotspot-pin door",
         pitch: 3,
         yaw: 91,
         sceneId: "S1C",
@@ -104,7 +104,7 @@ const scenes = {
       {
         type: "scene",
         text: "Move",
-        cssClass: "custom-pin move",
+        cssClass: "hotspot-pin move",
         pitch: -4,
         yaw: 0,
         sceneId: "S1B",
@@ -114,7 +114,7 @@ const scenes = {
       {
         type: "scene",
         text: "Exit SR1",
-        cssClass: "custom-pin door",
+        cssClass: "hotspot-pin door",
         pitch: 1,
         yaw: -87,
         sceneId: "AAAA",
@@ -124,7 +124,7 @@ const scenes = {
       {
         type: "scene",
         text: "Exit SR1",
-        cssClass: "custom-pin door",
+        cssClass: "hotspot-pin door",
         pitch: 1,
         yaw: 89.6,
         sceneId: "AAAA",

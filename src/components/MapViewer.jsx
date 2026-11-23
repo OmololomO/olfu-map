@@ -4,13 +4,13 @@ import "./MapViewer.css";
 import FloorControls from "./FloorControls"
 import { FLOORS, FLOOR_MAPS } from "../data/floors";
 
-export default function MapViewer({ scenes, floor, onFloorChange, focusId, onPinClick }) {
+export default function MapViewer({ scenes, floor, onFloorChange, startingSceneID, onPinClick }) {
   const { viewportRef, contentRef, contentStyle, view, dragged, bind, zoomBy } = usePanZoom({
-    zoomOutLimit: 0.5,   // furthest you can zoom out (smaller = more zoomed out)
-    zoomInLimit: 30,      // closest you can zoom in
-    startZoom: 1,        // how zoomed in it starts
+    zoomOutLimit: 0.5,
+    zoomInLimit: 30,
+    startZoom: 1,
     panLimit: "to-center", // you can drag any edge or corner of the map to the middle
-    centeredPin: scenes[focusId]?.map, // open centered on the current scene's pin
+    centeredPin: scenes[startingSceneID]?.map, // open centered on the current scene's pin
   });
 
   return (

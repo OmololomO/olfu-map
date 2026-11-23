@@ -5,26 +5,26 @@ import "./MiniMap.css";
 import FloorControls from "./FloorControls"
 import { FLOORS, FLOOR_MAPS } from "../data/floors";
 
-export default function MiniMap({ scenes, floor, onFloorChange, activeId, onPinClick }) {
-  const [expanded, setExpanded] = useState(false);
+export default function MiniMap({ scenes, floor, onFloorChange, startingSceneID, onPinClick }) {
+  const [isExpanded, setisExpanded] = useState(false);
 
   const { viewportRef, contentRef, contentStyle, view, dragged, bind, zoomBy } = usePanZoom({
     zoomOutLimit: 1,
     zoomInLimit: 8,
     startZoom: 3,
     panLimit: "to-center",
-    centeredPin: scenes[activeId]?.map,
+    centeredPin: scenes[startingSceneID]?.map,
   });
 
   return (
-    <div className={`minimap ${expanded ? "expanded" : ""}`}>
+    <div className={`minimap ${isExpanded ? "expanded" : ""}`}>
       <div className="minimap-inner">
         <div ref={viewportRef} className="minimap-viewport" {...bind}>
           <div ref={contentRef} className="minimap-content" style={contentStyle}>
             <img src={FLOOR_MAPS[floor]} alt={`Campus map, floor ${floor}`} draggable={false} />
             <MapPins
               scenes={scenes}
-              activeId={activeId}
+              activeId={startingSceneID}
               floor={floor}
               zoom={view.zoom}
               dragged={dragged}
@@ -36,15 +36,14 @@ export default function MiniMap({ scenes, floor, onFloorChange, activeId, onPinC
 
         <button
           className="minimap-toggle"
-          onClick={() => setExpanded(!expanded)}
-          aria-label={expanded ? "Shrink map" : "Enlarge map"}
+          onClick={() => setisExpanded(!isExpanded)}
         >
-          {expanded ? "−" : "⤢"}
+          {isExpanded ? "−" : "⤢"}
         </button>
 
         <div className="minimap-zoom">
-          <button onClick={() => zoomBy(1.4)} aria-label="Zoom in">+</button>
-          <button onClick={() => zoomBy(1 / 1.4)} aria-label="Zoom out">−</button>
+          <button onClick={() => zoomBy(1.4)}>+</button>
+          <button onClick={() => zoomBy(1 / 1.4)}>−</button>
         </div>
 
         <div className="minimap-floor-controls">

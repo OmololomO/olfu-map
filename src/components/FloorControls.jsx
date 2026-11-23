@@ -2,19 +2,19 @@ import { useEffect, useRef, useState } from "react";
 import "./FloorControls.css";
 
 export default function FloorControls({ floors, currentFloor, onChange}) {
-  const [open, setOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const rootRef = useRef(null);
 
   // While open, close on a press outside of it, or on the Escape key
   useEffect(() => {
-    if (!open) return;
+    if (!isOpen) return;
 
     function closeIfOutside(e) {
-      if (!rootRef.current?.contains(e.target)) setOpen(false);
+      if (!rootRef.current?.contains(e.target)) setIsOpen(false);
     }
 
     function closeOnEscape(e) {
-      if (e.key === "Escape") setOpen(false);
+      if (e.key === "Escape") setIsOpen(false);
     }
 
     document.addEventListener("pointerdown", closeIfOutside);
@@ -23,20 +23,19 @@ export default function FloorControls({ floors, currentFloor, onChange}) {
       document.removeEventListener("pointerdown", closeIfOutside);
       document.removeEventListener("keydown", closeOnEscape);
     };
-  }, [open]);
+  }, [isOpen]);
 
   return (
     <div ref={rootRef} className={`floor-controls`}>
-      {open && (
+      {isOpen && (
         <ul className="floor-menu">
           {[...floors].reverse().map((floor) => (
             <li key={floor}>
               <button
                 className={`floor-option ${floor === currentFloor ? "active" : ""}`}
-                aria-current={floor === currentFloor}
                 onClick={() => {
                   onChange(floor);
-                  setOpen(false);
+                  setIsOpen(false);
                 }}
               >
                 Floor {floor}
@@ -46,8 +45,8 @@ export default function FloorControls({ floors, currentFloor, onChange}) {
         </ul>
       )}
 
-      <button className="floor-toggle" onClick={() => setOpen(!open)}>
-        Floor {currentFloor} <span>{open ? "▾" : "▴"}</span>
+      <button className="floor-toggle" onClick={() => setIsOpen(!isOpen)}>
+        Floor {currentFloor} <span>{isOpen ? "▾" : "▴"}</span>
       </button>
     </div>
   );
