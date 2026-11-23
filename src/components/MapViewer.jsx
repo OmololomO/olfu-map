@@ -1,4 +1,4 @@
-import usePanZoom from "./usePanZoom";
+import usePanZoom from "../utils/usePanZoom";
 import MapPins from "./MapPins";
 import "./MapViewer.css";
 

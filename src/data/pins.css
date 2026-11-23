@@ -1,32 +1,62 @@
-/* Base Pin Looks */
 .custom-pin {
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.8);
   border: 2px solid #000000;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
-  
-  background-image: none;
-  background-size: 60%;
-  background-repeat: no-repeat;
-  background-position: center;
   cursor: pointer;
 }
 
-
-/* Individual Pin Looks */
-.door {
-    
-    background-color: #ffffff; 
-    background-image: url('/public/pin_icons/enter_door.png');
-    background-size: 60%;   
+/* Inner Icon Layer */
+.custom-pin::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.move {
-    --oval-y: 150px;
+/* Optional Flip Modifiers */
+.flip-x::before {
+  transform: scaleX(-1);
+}
 
-    background-color: #ffffff; 
-    background-image: url('/public/pin_icons/move.png');
-    background-size: 60%;   
+/* Individual Pin Icons */
+.door::before {
+  background-image: url('/public/pin_icons/enter_door.png');
+}
+
+.move::before {
+  background-image: url('/public/pin_icons/move.png');
+}
+
+.info {
+  background-color: #2272fe;
+}
+.info::before {
+  background-image: url('/public/pin_icons/info.png');
+}
+
+.elevator {
+  background-color: #2272fe;
+}
+.elevator::before {
+  background-image: url('/public/pin_icons/elevator.png');
+}
+
+.stairs_up::before {
+  background-image: url('/public/pin_icons/stairs up.png');
+}
+
+.stairs_down::before {
+  background-image: url('/public/pin_icons/stairs down.png');
+}
+
+.bathroom {
+  background-color: #2272fe;
+}
+.bathroom::before {
+  background-image: url('/public/pin_icons/bathroom.png');
 }

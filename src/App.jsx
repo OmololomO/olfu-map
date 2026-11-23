@@ -1,21 +1,25 @@
 import { useState } from "react";
+import { ButtonGroup, Button } from "react-bootstrap";
 import PanoViewer from "./components/PanoViewer";
 import MapViewer from "./components/MapViewer";
 import InfoCard from "./components/InfoCard";
 import MiniMap from "./components/MiniMap";
 import scenes from "./data/scenes";
 import "./App.css";
-import { ButtonGroup, Button } from "react-bootstrap";
+
 
 function App() {
-  const [sceneId, setSceneId] = useState("B2-F1-FAC-01");
+  const [sceneId, setSceneId] = useState("B2-F1-FAC-01"); // Starting scene ID
   const [view, setView] = useState("map"); // "tour" or "map"
-
+  const [selectedInfo, setSelectedInfo] = useState(null);
+  const info = selectedInfo?.sceneId === sceneId ? selectedInfo : null;
 
   function goToScene(id) {
     setSceneId(id);
+    setSelectedInfo(null);
     setView("tour");
   }
+
   return (
     <div className="d-flex flex-column vh-100">
       {/* Navigation Bar */}
@@ -28,12 +32,8 @@ function App() {
 
         {/* Tour/Map Buttons */}
         <ButtonGroup size="sm">
-          <Button variant={view === "map" ? "light" : "outline-light"} onClick={() => setView("map")}>
-            Map
-          </Button>
-          <Button variant={view === "tour" ? "light" : "outline-light"} onClick={() => setView("tour")}>
-            Tour
-          </Button>
+          <Button variant={view === "map" ? "light" : "outline-light"} onClick={() => setView("map")}> Map </Button>
+          <Button variant={view === "tour" ? "light" : "outline-light"} onClick={() => setView("tour")}> Tour </Button>
         </ButtonGroup>
       </header>
 
@@ -42,11 +42,11 @@ function App() {
       <main className="stage">
         {view === "tour" ? (
           <>
-            <div className="pano">
-              <PanoViewer sceneId={sceneId} onSceneChange={setSceneId} />
+            <div className="pano" onPointerUp={() => setSelectedInfo(null)}>
+              <PanoViewer sceneId={sceneId} onSceneChange={setSceneId} onInfoClick={setSelectedInfo} />
             </div>
-            <InfoCard scene={scenes[sceneId]} />
-            <MiniMap scenes={scenes} activeId={sceneId} onPinClick={setSceneId} />
+            <InfoCard scene={scenes[sceneId]} info={info} />
+            <MiniMap scenes={scenes} activeId={sceneId} onPinClick={goToScene} />
           </>
         ) : (
           <MapViewer scenes={scenes} focusId={sceneId} onPinClick={goToScene} />

@@ -8,8 +8,13 @@ export default function MapPins({
   onPinClick,
   showLabels = false,
 }) {
-  return Object.entries(scenes).map(([id, s]) =>
-    s.map ? (
+  return Object.entries(scenes).map(([id, s]) => {
+    if (!s.map) return null;
+
+    // Trim whitespace so strings like "   " also count as empty
+    const cleanTitle = s.title?.trim();
+
+    return (
       <button
         key={id}
         className={`pin ${id === activeId ? "active" : ""}`}
@@ -19,13 +24,15 @@ export default function MapPins({
           // cancel the map's zoom so pins keep their size
           transform: `translate(-50%, -50%) scale(${1 / zoom})`,
         }}
-        title={s.title}
+        title={cleanTitle || undefined}
         onClick={() => {
           if (!dragged.current) onPinClick(id); // ignore the click that ends a drag
         }}
       >
-        {showLabels && <span className="pin-label">{s.title}</span>}
+        {showLabels && cleanTitle && (
+          <span className="pin-label">{cleanTitle}</span>
+        )}
       </button>
-    ) : null
-  );
+    );
+  });
 }

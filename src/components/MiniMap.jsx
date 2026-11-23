@@ -1,5 +1,5 @@
 import { useState } from "react";
-import usePanZoom from "./usePanZoom";
+import usePanZoom from "../utils/usePanZoom";
 import MapPins from "./MapPins";
 import "./MiniMap.css";
 
@@ -27,7 +27,7 @@ export default function MiniMap({ scenes, activeId, onPinClick }) {
               zoom={view.zoom}
               dragged={dragged}
               onPinClick={onPinClick}
-              showLabels={expanded}
+              showLabels={true}
             />
           </div>
         </div>
