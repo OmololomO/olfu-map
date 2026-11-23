@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ButtonGroup, Button } from "react-bootstrap";
 import PanoViewer from "./components/PanoViewer";
 import MapViewer from "./components/MapViewer";
@@ -6,14 +6,30 @@ import InfoCard from "./components/InfoCard";
 import MiniMap from "./components/MiniMap";
 import scenes from "./data/scenes";
 import "./App.css";
+import { FLOOR_MAPS } from "./data/floors";
+
 
 
 function App() {
-  const [sceneId, setSceneId] = useState("B2-F1-FAC-01"); // Starting scene ID
-  const [view, setView] = useState("map"); // "tour" or "map"
+  const [sceneId, setSceneId] = useState("1"); // Current Scene(Starting at Scene ID 1)
+  const [view, setView] = useState("map"); // Starting View("tour" or "map")
+  const [floor, setFloor] = useState(1); // Current Floor(Starting at Floor 1)
   const [selectedInfo, setSelectedInfo] = useState(null);
   const info = selectedInfo?.sceneId === sceneId ? selectedInfo : null;
 
+  // Load Floor Maps on component startup
+  useEffect(() => {
+    Object.values(FLOOR_MAPS).forEach((src) => {
+      new Image().src = src;
+    });
+  }, []);
+
+  // Change floor when sceneId changes
+  useEffect(() => {
+    const sceneFloor = scenes[sceneId]?.floor;
+    if (sceneFloor) setFloor(sceneFloor);
+  }, [sceneId]);
+  
   function goToScene(id) {
     setSceneId(id);
     setSelectedInfo(null);
@@ -46,10 +62,10 @@ function App() {
               <PanoViewer sceneId={sceneId} onSceneChange={setSceneId} onInfoClick={setSelectedInfo} />
             </div>
             <InfoCard scene={scenes[sceneId]} info={info} />
-            <MiniMap scenes={scenes} activeId={sceneId} onPinClick={goToScene} />
+            <MiniMap scenes={scenes} floor={floor} onFloorChange={setFloor} activeId={sceneId} onPinClick={goToScene} />
           </>
         ) : (
-          <MapViewer scenes={scenes} focusId={sceneId} onPinClick={goToScene} />
+          <MapViewer scenes={scenes} floor={floor} onFloorChange={setFloor} focusId={sceneId} onPinClick={goToScene} />
         )}
       </main>
     </div>

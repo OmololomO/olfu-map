@@ -3,13 +3,14 @@ import "./MapPins.css";
 export default function MapPins({
   scenes,
   activeId,
+  floor,
   zoom,
   dragged,
   onPinClick,
   showLabels = false,
 }) {
   return Object.entries(scenes).map(([id, s]) => {
-    if (!s.map) return null;
+    if (!s.map || s.floor !== floor) return null; 
 
     // Trim whitespace so strings like "   " also count as empty
     const cleanTitle = s.title?.trim();

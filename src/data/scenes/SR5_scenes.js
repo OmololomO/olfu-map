@@ -1,6 +1,5 @@
 import "../pins.css";
 
-
 const scenes = {
   // gate: {                               // ID
   //   title: "Main Gate",                 // Name of place
@@ -21,25 +20,25 @@ const scenes = {
   // Floor 1
   "S51": {
     title: "S51",
+    description: "",
     panorama: "/panoramas/SR5/Floor1/B5-GF-NAV01.jpg",
-    description: "", 
-    map: { x: 65, y: 8.9 },
     pitch: 0,
     yaw: 0,
+    floor: 1,
+    map: { x: 65, y: 8.9 },
     hotSpots: [
       {
-        pitch: -2,
-        yaw: -4.5,
         type: "scene",
         text: "Exit SR5",
-        sceneId: "AAAA",
-        targetYaw: 0,
-        targetPitch: 0,
         cssClass: "custom-pin door",
+        pitch: -2,
+        yaw: -4.5,
+        sceneId: "AAAA",
+        targetPitch: 0,
+        targetYaw: 0,
       },
     ],
   },
-
 
   // Floor 2
   // Floor 3

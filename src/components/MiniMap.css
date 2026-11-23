@@ -43,3 +43,9 @@
   position: absolute; right: 4px; bottom: 4px;
   display: flex; flex-direction: column; gap: 4px;
 }
+
+.minimap-floor-controls {
+  position: absolute; 
+  left: 4px; 
+  bottom: 4px
+}

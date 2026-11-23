@@ -1,0 +1,44 @@
+.floor-controls {
+  position: relative;
+  display: inline-block;
+}
+
+.floor-toggle,
+.floor-option {
+  border: 0;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  color: #333;
+}
+
+/* The button that is always visible */
+.floor-toggle {
+  padding: 8px 10px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* The list that opens upward */
+.floor-menu {
+  position: absolute;
+  bottom: calc(100% + 4px);
+  left: 0;
+  margin: 0;
+  padding: 4px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: rgba(255, 255, 255, 0.97);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.floor-option {
+  width: 100%;
+  padding: 7px 10px;
+  background: transparent;
+  text-align: left;
+}
+.floor-option:hover { background: #e8f5e9; }
+.floor-option.active { background: #2e7d32; color: #fff; }

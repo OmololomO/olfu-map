@@ -1,10 +1,10 @@
 import usePanZoom from "../utils/usePanZoom";
 import MapPins from "./MapPins";
 import "./MapViewer.css";
+import FloorControls from "./FloorControls"
+import { FLOORS, FLOOR_MAPS } from "../data/floors";
 
-const MAP_SRC = "/maps/olfu_map.svg";
-
-export default function MapViewer({ scenes, focusId, onPinClick }) {
+export default function MapViewer({ scenes, floor, onFloorChange, focusId, onPinClick }) {
   const { viewportRef, contentRef, contentStyle, view, dragged, bind, zoomBy } = usePanZoom({
     zoomOutLimit: 0.5,   // furthest you can zoom out (smaller = more zoomed out)
     zoomInLimit: 30,      // closest you can zoom in
@@ -17,11 +17,10 @@ export default function MapViewer({ scenes, focusId, onPinClick }) {
     <div className="map-viewer">
       <div ref={viewportRef} className="map-viewport" {...bind}>
         <div ref={contentRef} className="map-content" style={contentStyle}>
-          <img
-            src={MAP_SRC}
-            alt="Campus map"
-            draggable={false}
-            // Helps in knowing the x and y coordinates of the click on the map for finding pin locations
+          <img 
+            src={FLOOR_MAPS[floor]} 
+            alt={`Campus map, floor ${floor}`} 
+            draggable={false} 
             onClick={(e) => {
               if (!e.altKey) return; // only when Alt is held, so normal clicks are unaffected
               const x = (e.nativeEvent.offsetX / e.target.clientWidth) * 100;
@@ -31,6 +30,7 @@ export default function MapViewer({ scenes, focusId, onPinClick }) {
           />
           <MapPins
             scenes={scenes}
+            floor={floor}
             zoom={view.zoom}
             dragged={dragged}
             onPinClick={onPinClick}
@@ -42,6 +42,10 @@ export default function MapViewer({ scenes, focusId, onPinClick }) {
       <div className="map-zoom">
         <button onClick={() => zoomBy(1.4)}>+</button>
         <button onClick={() => zoomBy(1 / 1.4)}>−</button>
+      </div>
+
+      <div className="map-floor-controls">
+        <FloorControls floors={FLOORS} currentFloor={floor} onChange={onFloorChange} />
       </div>
     </div>
   );
