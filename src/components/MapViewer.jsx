@@ -1,36 +1,50 @@
 import usePanZoom from "../utils/usePanZoom";
 import MapPins from "./MapPins";
 import "./MapViewer.css";
-import FloorControls from "./FloorControls"
+import FloorControls from "./FloorControls";
 import { FLOORS, FLOOR_MAPS } from "../data/floors";
 
-export default function MapViewer({ scenes, floor, onFloorChange, startingSceneID, onPinClick }) {
-  const { viewportRef, contentRef, contentStyle, view, dragged, bind, zoomBy } = usePanZoom({
-    zoomOutLimit: 0.5,
-    zoomInLimit: 30,
-    startZoom: 1,
-    panLimit: "to-center", // you can drag any edge or corner of the map to the middle
-    centeredPin: scenes[startingSceneID]?.map, // open centered on the current scene's pin
-  });
+export default function MapViewer({
+  scenes,
+  floor,
+  building,
+  onFloorChange,
+  startingSceneID,
+  onPinClick,
+  mapSrc = FLOOR_MAPS[floor],
+}) {
+  const { viewportRef, contentRef, contentStyle, view, dragged, bind, zoomBy } =
+    usePanZoom({
+      zoomOutLimit: 0.5,
+      zoomInLimit: 30,
+      startZoom: 1,
+      panLimit: "to-center",
+      centeredPin: scenes[startingSceneID]?.map,
+    });
 
   return (
     <div className="map-viewer">
       <div ref={viewportRef} className="map-viewport" {...bind}>
         <div ref={contentRef} className="map-content" style={contentStyle}>
-          <img 
-            src={FLOOR_MAPS[floor]} 
-            alt={`Campus map, floor ${floor}`} 
-            draggable={false} 
+          <img
+            src={mapSrc}
+            alt={`Campus map, floor ${floor}`}
+            draggable={false}
             onClick={(e) => {
-              if (!e.altKey) return; // only when Alt is held, so normal clicks are unaffected
+              if (!e.altKey) return;
+
               const x = (e.nativeEvent.offsetX / e.target.clientWidth) * 100;
+
               const y = (e.nativeEvent.offsetY / e.target.clientHeight) * 100;
+
               console.log(`map: { x: ${x.toFixed(1)}, y: ${y.toFixed(1)} },`);
             }}
           />
+
           <MapPins
             scenes={scenes}
             floor={floor}
+            building={building}
             zoom={view.zoom}
             dragged={dragged}
             onPinClick={onPinClick}
@@ -45,7 +59,11 @@ export default function MapViewer({ scenes, floor, onFloorChange, startingSceneI
       </div>
 
       <div className="map-floor-controls">
-        <FloorControls floors={FLOORS} currentFloor={floor} onChange={onFloorChange} />
+        <FloorControls
+          floors={FLOORS}
+          currentFloor={floor}
+          onChange={onFloorChange}
+        />
       </div>
     </div>
   );

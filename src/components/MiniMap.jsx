@@ -2,30 +2,52 @@ import { useState } from "react";
 import usePanZoom from "../utils/usePanZoom";
 import MapPins from "./MapPins";
 import "./MiniMap.css";
-import FloorControls from "./FloorControls"
+import FloorControls from "./FloorControls";
 import { FLOORS, FLOOR_MAPS } from "../data/floors";
 
-export default function MiniMap({ scenes, floor, onFloorChange, startingSceneID, onPinClick }) {
+export default function MiniMap({
+  scenes,
+  floor,
+  building,
+  onFloorChange,
+  startingSceneID,
+  onPinClick,
+  mapSrc = FLOOR_MAPS[floor],
+}) {
   const [isExpanded, setIsExpanded] = useState(false);
 
-  const { viewportRef, contentRef, contentStyle, view, dragged, bind, zoomBy } = usePanZoom({
-    zoomOutLimit: 1,
-    zoomInLimit: 8,
-    startZoom: 3,
-    panLimit: "to-center",
-    centeredPin: scenes[startingSceneID]?.map,
-  });
+  const { viewportRef, contentRef, contentStyle, view, dragged, bind, zoomBy } =
+    usePanZoom({
+      zoomOutLimit: 1,
+      zoomInLimit: 8,
+      startZoom: 3,
+      panLimit: "to-center",
+      centeredPin:
+        building === "Outside" || building === "Canteen"
+          ? scenes[startingSceneID]?.map
+          : scenes[startingSceneID]?.buildingMap,
+    });
 
   return (
     <div className={`minimap ${isExpanded ? "expanded" : ""}`}>
       <div className="minimap-inner">
         <div ref={viewportRef} className="minimap-viewport" {...bind}>
-          <div ref={contentRef} className="minimap-content" style={contentStyle}>
-            <img src={FLOOR_MAPS[floor]} alt={`Campus map, floor ${floor}`} draggable={false} />
+          <div
+            ref={contentRef}
+            className="minimap-content"
+            style={contentStyle}
+          >
+            <img
+              src={mapSrc}
+              alt={`Campus map, floor ${floor}`}
+              draggable={false}
+            />
+
             <MapPins
               scenes={scenes}
               activeId={startingSceneID}
               floor={floor}
+              building={building}
               zoom={view.zoom}
               dragged={dragged}
               onPinClick={onPinClick}
@@ -47,7 +69,11 @@ export default function MiniMap({ scenes, floor, onFloorChange, startingSceneID,
         </div>
 
         <div className="minimap-floor-controls">
-          <FloorControls floors={FLOORS} currentFloor={floor} onChange={onFloorChange} />
+          <FloorControls
+            floors={FLOORS}
+            currentFloor={floor}
+            onChange={onFloorChange}
+          />
         </div>
       </div>
     </div>
