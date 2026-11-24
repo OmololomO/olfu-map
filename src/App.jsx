@@ -6,9 +6,7 @@ import InfoCard from "./components/InfoCard";
 import MiniMap from "./components/MiniMap";
 import scenes from "./data/scenes";
 import "./App.css";
-import { FLOOR_MAPS } from "./data/floors";
-
-
+import { FLOOR_MAPS, BUILDING_MAPS } from "./data/floors";
 
 function App() {
   const [sceneId, setSceneId] = useState("1"); // Current Scene(Starting at Scene ID 1)
@@ -16,6 +14,11 @@ function App() {
   const [floor, setFloor] = useState(1); // Current Floor(Starting at Floor 1)
   const [selectedInfo, setSelectedInfo] = useState(null);
   const info = selectedInfo?.sceneId === sceneId ? selectedInfo : null;
+  // Identify the active scene's building
+  const currentBuilding = scenes[sceneId]?.building;
+
+  // Select the appropriate floor map
+  const mapSrc = BUILDING_MAPS[currentBuilding]?.[floor] || FLOOR_MAPS[floor];
 
   // Load Floor Maps on component startup
   useEffect(() => {
@@ -29,7 +32,7 @@ function App() {
     const sceneFloor = scenes[sceneId]?.floor;
     if (sceneFloor) setFloor(sceneFloor);
   }, [sceneId]);
-  
+
   function goToScene(id) {
     setSceneId(id);
     setSelectedInfo(null);
@@ -48,24 +51,55 @@ function App() {
 
         {/* Tour/Map Buttons */}
         <ButtonGroup size="sm">
-          <Button variant={view === "map" ? "light" : "outline-light"} onClick={() => setView("map")}> Map </Button>
-          <Button variant={view === "tour" ? "light" : "outline-light"} onClick={() => setView("tour")}> Tour </Button>
+          <Button
+            variant={view === "map" ? "light" : "outline-light"}
+            onClick={() => setView("map")}
+          >
+            {" "}
+            Map{" "}
+          </Button>
+          <Button
+            variant={view === "tour" ? "light" : "outline-light"}
+            onClick={() => setView("tour")}
+          >
+            {" "}
+            Tour{" "}
+          </Button>
         </ButtonGroup>
       </header>
-
 
       {/* Main Content(Tour/Map) */}
       <main className="stage">
         {view === "tour" ? (
           <>
             <div className="pano" onPointerUp={() => setSelectedInfo(null)}>
-              <PanoViewer sceneId={sceneId} onSceneChange={setSceneId} onInfoClick={setSelectedInfo} />
+              <PanoViewer
+                sceneId={sceneId}
+                onSceneChange={setSceneId}
+                onInfoClick={setSelectedInfo}
+              />
             </div>
             <InfoCard scene={scenes[sceneId]} info={info} />
-            <MiniMap scenes={scenes} floor={floor} onFloorChange={setFloor} activeId={sceneId} onPinClick={goToScene} />
+            <MiniMap
+              scenes={scenes}
+              floor={floor}
+              building={currentBuilding}
+              mapSrc={mapSrc}
+              onFloorChange={setFloor}
+              startingSceneID={sceneId}
+              onPinClick={goToScene}
+            />
           </>
         ) : (
-          <MapViewer scenes={scenes} floor={floor} onFloorChange={setFloor} focusId={sceneId} onPinClick={goToScene} />
+          <MapViewer
+            scenes={scenes}
+            floor={floor}
+            building={currentBuilding}
+            mapSrc={mapSrc}
+            onFloorChange={setFloor}
+            startingSceneID={sceneId}
+            onPinClick={goToScene}
+          />
         )}
       </main>
     </div>

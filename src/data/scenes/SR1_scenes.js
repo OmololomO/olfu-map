@@ -26,6 +26,7 @@ const scenes = {
     yaw: 0,
     floor: 1,
     map: { x: 59.3, y: 89.9 },
+    buildingMap: { x: 21.8, y: 85.2 },
     hotSpots: [
       {
         type: "scene",
@@ -58,6 +59,7 @@ const scenes = {
     yaw: 0,
     floor: 1,
     map: { x: 60.1, y: 79.9 },
+    buildingMap: { x: 24.3, y: 25.2 },
     hotSpots: [
       {
         type: "scene",
@@ -100,6 +102,7 @@ const scenes = {
     yaw: 0,
     floor: 1,
     map: { x: 70.3, y: 79.9 },
+    buildingMap: { x: 65.9, y: 25.6 },
     hotSpots: [
       {
         type: "scene",
