@@ -62,10 +62,10 @@ function App() {
               <PanoViewer sceneId={sceneId} onSceneChange={setSceneId} onInfoClick={setSelectedInfo} />
             </div>
             <InfoCard scene={scenes[sceneId]} info={info} />
-            <MiniMap scenes={scenes} floor={floor} onFloorChange={setFloor} activeId={sceneId} onPinClick={goToScene} />
+            <MiniMap scenes={scenes} floor={floor} onFloorChange={setFloor} startingSceneID={sceneId} onPinClick={goToScene} />
           </>
         ) : (
-          <MapViewer scenes={scenes} floor={floor} onFloorChange={setFloor} focusId={sceneId} onPinClick={goToScene} />
+          <MapViewer scenes={scenes} floor={floor} onFloorChange={setFloor} startingSceneID={sceneId} onPinClick={goToScene} />
         )}
       </main>
     </div>

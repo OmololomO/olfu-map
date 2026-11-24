@@ -6,7 +6,7 @@ import FloorControls from "./FloorControls"
 import { FLOORS, FLOOR_MAPS } from "../data/floors";
 
 export default function MiniMap({ scenes, floor, onFloorChange, startingSceneID, onPinClick }) {
-  const [isExpanded, setisExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const { viewportRef, contentRef, contentStyle, view, dragged, bind, zoomBy } = usePanZoom({
     zoomOutLimit: 1,
@@ -36,7 +36,7 @@ export default function MiniMap({ scenes, floor, onFloorChange, startingSceneID,
 
         <button
           className="minimap-toggle"
-          onClick={() => setisExpanded(!isExpanded)}
+          onClick={() => setIsExpanded(!isExpanded)}
         >
           {isExpanded ? "−" : "⤢"}
         </button>
