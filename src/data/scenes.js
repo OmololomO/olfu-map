@@ -1,18 +1,18 @@
-import Outside_scenes from "./scenes/Outside_scenes";
-import SR1_scenes from "./scenes/SR1_scenes";
+import outsideScenes from "./scenes/outside-scenes";
+import sr1Scenes from "./scenes/sr1/sr1-scenes";
 import sr2Scenes from "./scenes/sr2/sr2-scenes";
-import SR3_scenes from "./scenes/SR3_scenes";
-import SR4_scenes from "./scenes/SR4_scenes";
-import SR5_scenes from "./scenes/SR5_scenes";
-import Canteen_scenes from "./scenes/Canteen_scenes";
+import sr3Scenes from "./scenes/sr3/sr3-scenes";
+import sr4Scenes from "./scenes/sr4/sr4-scenes";
+import sr5Scenes from "./scenes/sr5/sr5-scenes";
+import canteenScenes from "./scenes/canteen-scenes";
 
 const scenes = { 
-    ...SR1_scenes, 
+    ...sr1Scenes, 
     ...sr2Scenes, 
-    ...SR3_scenes, 
-    ...SR4_scenes, 
-    ...SR5_scenes, 
-    ...Canteen_scenes, 
-    ...Outside_scenes 
+    ...sr3Scenes, 
+    ...sr4Scenes, 
+    ...sr5Scenes, 
+    ...canteenScenes, 
+    ...outsideScenes,
 };
 export default scenes;

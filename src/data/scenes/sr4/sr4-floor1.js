@@ -1,24 +1,7 @@
-import "../pins.css";
+import "../../pins.css";
 
-const scenes = {
-  // gate: {                               // ID
-  //   title: "Main Gate",                 // Name of place
-  //   panorama: "/panoramas/test.jpg",    // Image path
-  //   description: "",                    // Description of place
-  //   map: { x: 10, y: 25 },              // Pin Position On The Map 
-  //   hotSpots: [                         // Buttons That Go To Other Panoramas
-  //     {
-  //       pitch: -5,                      // y-axis (up/down)
-  //       yaw: 90,                        // x-axis (left/right)
-  //       type: "scene",                  
-  //       text: "Go to Path",             // Text To Show On Button Focused
-  //       sceneId: "path",                // Panorama To Go To
-  //     },
-  //   ],
-  // },
-
-  // Floor 1
-  "S41": {
+const sr4Floor1 = {
+      "S41": {
     title: "S41",
     description: "",
     panorama: "/panoramas/SR4/Floor1/B4-GF-LRC-NAV01.jpg",
@@ -143,11 +126,7 @@ const scenes = {
       },
     ],
   },
-
-  // Floor 2
-  // Floor 3
-  // Floor 4
-  // Floor 5
+ 
 };
 
-export default scenes;
+export default sr4Floor1;
