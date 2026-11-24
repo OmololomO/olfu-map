@@ -31,7 +31,7 @@ const scenes = {
       {
         type: "scene",
         text: "Move",
-        cssClass: "custom-pin door",
+        cssClass: "hotspot-pin door",
         pitch: 0,
         yaw: -18.5,
         sceneId: "6",
