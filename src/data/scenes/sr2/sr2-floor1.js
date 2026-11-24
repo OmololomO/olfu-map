@@ -1,23 +1,6 @@
-import "../pins.css";
+import "../../pins.css";
 
-const scenes = {
-  // gate: {                               // ID
-  //   title: "Main Gate",                 // Name of place
-  //   panorama: "/panoramas/test.jpg",    // Image path
-  //   description: "",                    // Description of place
-  //   map: { x: 10, y: 25 },              // Pin Position On The Map 
-  //   hotSpots: [                         // Buttons That Go To Other Panoramas
-  //     {
-  //       pitch: -5,                      // y-axis (up/down)
-  //       yaw: 90,                        // x-axis (left/right)
-  //       type: "scene",                  
-  //       text: "Go to Path",             // Text To Show On Button Focused
-  //       sceneId: "path",                // Panorama To Go To
-  //     },
-  //   ],
-  // },
-
-  // Floor 1
+const sr2Floor1 = {
   "B2-F1-FAC-01": {
     title: "B2-F1-FAC-01",
     description: "",
@@ -349,11 +332,7 @@ const scenes = {
       },
     ],
   },
+  
+}
 
-  // Floor 2
-  // Floor 3
-  // Floor 4
-  // Floor 5
-};
-
-export default scenes;
+export default sr2Floor1;
