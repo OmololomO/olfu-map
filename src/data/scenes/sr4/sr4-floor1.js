@@ -23,7 +23,7 @@ const sr4Floor1 = {
       {
         type: "scene",
         text: "Exit Library",
-        cssClass: "hotspot-pin door",
+        cssClass: "hotspot-pin exit-enter-door",
         pitch: -3.5,
         yaw: 63.6,
         sceneId: "S43",
@@ -33,7 +33,7 @@ const sr4Floor1 = {
       {
         type: "scene",
         text: "Exit Library/SR4",
-        cssClass: "hotspot-pin door",
+        cssClass: "hotspot-pin exit-door",
         pitch: -2,
         yaw: -94.5,
         sceneId: "S42",
@@ -65,7 +65,7 @@ const sr4Floor1 = {
       {
         type: "scene",
         text: "Exit Library",
-        cssClass: "hotspot-pin door",
+        cssClass: "hotspot-pin exit-door",
         pitch: -2,
         yaw: 43,
         sceneId: "S43",
@@ -75,7 +75,7 @@ const sr4Floor1 = {
       {
         type: "scene",
         text: "Exit Library/SR4",
-        cssClass: "hotspot-pin door",
+        cssClass: "hotspot-pin exit-door",
         pitch: -1,
         yaw: -49,
         sceneId: "S41",
@@ -97,7 +97,7 @@ const sr4Floor1 = {
       {
         type: "scene",
         text: "Enter Library",
-        cssClass: "hotspot-pin door",
+        cssClass: "hotspot-pin enter-door",
         pitch: -2,
         yaw: -88.7,
         sceneId: "S41",
@@ -107,7 +107,7 @@ const sr4Floor1 = {
       {
         type: "scene",
         text: "Exit SR4",
-        cssClass: "hotspot-pin door",
+        cssClass: "hotspot-pin exit-door",
         pitch: -2.5,
         yaw: 36,
         sceneId: "AAAA",
@@ -117,7 +117,7 @@ const sr4Floor1 = {
       {
         type: "scene",
         text: "Exit SR4",
-        cssClass: "hotspot-pin door",
+        cssClass: "hotspot-pin exit-door",
         pitch: -5,
         yaw: -39,
         sceneId: "AAAA",

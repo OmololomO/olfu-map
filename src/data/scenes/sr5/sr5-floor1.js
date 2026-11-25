@@ -13,7 +13,7 @@ const sr5Floor1 = {
       {
         type: "scene",
         text: "Exit SR5",
-        cssClass: "hotspot-pin door",
+        cssClass: "hotspot-pin exit-door",
         pitch: -2,
         yaw: -4.5,
         sceneId: "AAAA",

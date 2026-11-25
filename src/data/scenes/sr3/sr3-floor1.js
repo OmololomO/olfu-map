@@ -13,7 +13,7 @@ const sr3Floor1 = {
       {
         type: "scene",
         text: "Exit Auditorium",
-        cssClass: "hotspot-pin door",
+        cssClass: "hotspot-pin exit-door",
         pitch: 1,
         yaw: 163,
         sceneId: "S31",
@@ -23,7 +23,7 @@ const sr3Floor1 = {
       {
         type: "scene",
         text: "Exit Auditorium",
-        cssClass: "hotspot-pin door",
+        cssClass: "hotspot-pin exit-door",
         pitch: 0,
         yaw: 79.5,
         sceneId: "S33",
@@ -33,7 +33,7 @@ const sr3Floor1 = {
       {
         type: "scene",
         text: "Exit Auditorium",
-        cssClass: "hotspot-pin door",
+        cssClass: "hotspot-pin exit-door",
         pitch: 0.8,
         yaw: 27,
         sceneId: "S35",
@@ -55,7 +55,7 @@ const sr3Floor1 = {
       {
         type: "scene",
         text: "Enter Auditorium",
-        cssClass: "hotspot-pin door",
+        cssClass: "hotspot-pin enter-door",
         pitch: 0,
         yaw: 61,
         sceneId: "B3-GF-AUDI",
@@ -65,7 +65,7 @@ const sr3Floor1 = {
       {
         type: "scene",
         text: "Exit SR3",
-        cssClass: "hotspot-pin door",
+        cssClass: "hotspot-pin exit-door",
         pitch: 0.5,
         yaw: 352,
         sceneId: "C",
@@ -149,7 +149,7 @@ const sr3Floor1 = {
       {
         type: "scene",
         text: "Enter Auditorium",
-        cssClass: "hotspot-pin door",
+        cssClass: "hotspot-pin enter-door",
         pitch: 0.7,
         yaw: 158.5,
         sceneId: "B3-GF-AUDI",
@@ -191,7 +191,7 @@ const sr3Floor1 = {
       {
         type: "scene",
         text: "Enter Auditorium",
-        cssClass: "hotspot-pin door",
+        cssClass: "hotspot-pin enter-door",
         pitch: -2,
         yaw: 25.5,
         sceneId: "B3-GF-AUDI",
@@ -233,7 +233,7 @@ const sr3Floor1 = {
       {
         type: "scene",
         text: "Enter Auditorium",
-        cssClass: "hotspot-pin door",
+        cssClass: "hotspot-pin enter-door",
         pitch: -1,
         yaw: -208,
         sceneId: "B3-GF-AUDI",

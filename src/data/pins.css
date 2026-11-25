@@ -24,8 +24,12 @@
 }
 
 /* Individual Pin Icons */
-.door::before {
-  background-image: url('/public/pin_icons/enter_door.png');
+.enter-door::before {
+  background-image: url('/public/pin_icons/enter-door.png');
+}
+
+.exit-door::before {
+  background-image: url('/public/pin_icons/exit-door.png');
 }
 
 .move::before {
@@ -46,12 +50,12 @@
   background-image: url('/public/pin_icons/elevator.png');
 }
 
-.stairs_up::before {
-  background-image: url('/public/pin_icons/stairs up.png');
+.stairs-up::before {
+  background-image: url('/public/pin_icons/stairs-up.png');
 }
 
-.stairs_down::before {
-  background-image: url('/public/pin_icons/stairs down.png');
+.stairs-down::before {
+  background-image: url('/public/pin_icons/stairs-down.png');
 }
 
 .bathroom {
@@ -59,4 +63,8 @@
 }
 .bathroom::before {
   background-image: url('/public/pin_icons/bathroom.png');
+}
+
+.corner-move::before {
+  background-image: url('/public/pin_icons/corner-move.png');
 }

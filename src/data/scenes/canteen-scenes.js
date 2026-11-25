@@ -30,10 +30,20 @@ const scenes = {
     hotSpots: [
       {
         type: "scene",
-        text: "Move",
-        cssClass: "hotspot-pin door",
+        text: "Exit Canteen",
+        cssClass: "hotspot-pin exit-door flip-x",
         pitch: 0,
         yaw: -18.5,
+        sceneId: "6",
+        targetPitch: 0,
+        targetYaw: 0,
+      },
+      {
+        type: "scene",
+        text: "Exit Canteen",
+        cssClass: "hotspot-pin exit-door",
+        pitch: -0.4,
+        yaw: -184,
         sceneId: "6",
         targetPitch: 0,
         targetYaw: 0,

@@ -29,7 +29,7 @@ const scenes = {
       {
         type: "scene",
         text: "Enter SR1",
-        cssClass: "hotspot-pin door",
+        cssClass: "hotspot-pin enter-door",
         pitch: 0,
         yaw: 0,
         sceneId: "S1A",
@@ -166,7 +166,7 @@ const scenes = {
       {
         type: "scene",
         text: "Enter SR3",
-        cssClass: "hotspot-pin door",
+        cssClass: "hotspot-pin enter-door",
         pitch: 7,
         yaw: 270.5,
         sceneId: "S31",
@@ -464,7 +464,7 @@ const scenes = {
       {
         type: "scene",
         text: "Enter Canteen",
-        cssClass: "hotspot-pin door",
+        cssClass: "hotspot-pin enter-door",
         pitch: 1.5,
         yaw: -90.5,
         sceneId: "Canteen",
@@ -547,6 +547,16 @@ const scenes = {
     floor: 1,
     map: { x: 78.52, y: 56.81 },
     hotSpots: [
+      {
+        type: "scene",
+        text: "Enter SR2",
+        cssClass: "hotspot-pin enter-door",
+        pitch: 3,
+        yaw: 0.8,
+        sceneId: "B2-F1-NAV-01",
+        targetPitch: 0,
+        targetYaw: -94,
+      },
       {
         type: "scene",
         text: "Move",
@@ -688,7 +698,7 @@ const scenes = {
       {
         type: "scene",
         text: "Enter SR2",
-        cssClass: "hotspot-pin door",
+        cssClass: "hotspot-pin enter-door",
         pitch: 5,
         yaw: 92.6,
         sceneId: "B2-F1-NAV-04",
