@@ -1,0 +1,137 @@
+.pin {
+  position: absolute;
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background: #1565c0;
+  padding: 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+.pin.active { background: #d32f2f; width: 18px; height: 18px; z-index: 1; }
+
+.pin-label {
+  position: absolute;
+  left: 100%; top: 50%;
+  transform: translateY(-50%);
+  margin-left: 6px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #111;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.pin:hover {
+  width: 18px; height: 18px;
+}
+
+
+
+/* Facility and room markers */
+.location-marker {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  white-space: nowrap;
+  z-index: 2;
+}
+
+/* Icon */
+.location-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border: 1.5px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  flex-shrink: 0;
+}
+
+.location-icon svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* Facility */
+.facility-marker .location-icon {
+  background: #963d32;
+}
+
+/* Room */
+.room-marker .location-icon {
+  background: #397a56;
+}
+
+/* Labels */
+.location-label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1px;
+}
+
+.location-name {
+  padding: 3px 6px;
+  border-radius: 4px;
+  background: #963d32;
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.room-marker .location-name {
+  background: #397a56;
+}
+
+.location-description {
+  max-width: 140px;
+  overflow: hidden;
+  color: #fff;
+  font-size: 0.55rem;
+  font-weight: 600;
+  text-shadow: 0 1px 3px #000;
+  text-overflow: ellipsis;
+}
+
+.location-marker:hover {
+  z-index: 10;
+  filter: brightness(1.15);
+}
+
+
+/* Developer Mode pins */
+.pin.dev-pin,
+.pin.dev-pin.active {
+  background: #1565c0;
+  width: 14px;
+  height: 14px;
+  z-index: 5;
+}
+
+.dev-pin-label {
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 5px;
+  padding: 2px 5px;
+  border-radius: 4px;
+  background: #1565c0;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+  pointer-events: none;
+}
+

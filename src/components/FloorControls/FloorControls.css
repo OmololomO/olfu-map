@@ -26,9 +26,15 @@
   margin: 0;
   padding: 4px;
   list-style: none;
+
   display: flex;
   flex-direction: column;
   gap: 2px;
+
+  width: max-content;
+  min-width: 100%;
+  box-sizing: border-box;
+
   background: rgba(255, 255, 255, 0.97);
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
@@ -42,3 +48,21 @@
 }
 .floor-option:hover { background: #e8f5e9; }
 .floor-option.active { background: #2e7d32; color: #fff; }
+
+.floor-menu {
+  height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+  flex: none !important;
+}
+
+.floor-menu li {
+  height: auto !important;
+  flex: none !important;
+}
+
+.floor-option {
+  display: block;
+  height: auto !important;
+  min-height: 0;
+}

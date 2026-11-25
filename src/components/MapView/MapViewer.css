@@ -4,9 +4,15 @@
   background: #fff;
 }
 .map-viewport {
-  position: absolute; inset: 0;
+  position: absolute; 
+  inset: 0;
   overflow: hidden;
   user-select: none;
+  
+}
+
+.map-viewport:active {
+  cursor: move;
 }
 
 /* The map: as wide as the screen on a phone, but capped on big screens

@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { ButtonGroup, Button } from "react-bootstrap";
-import PanoViewer from "./components/PanoViewer";
-import MapViewer from "./components/MapViewer";
-import InfoCard from "./components/InfoCard";
-import MiniMap from "./components/MiniMap";
+import PanoViewer from "./components/PanoView/PanoViewer";
+import MapViewer from "./components/MapView/MapViewer";
+import InfoCard from "./components/InfoCard/InfoCard";
+import MiniMap from "./components/MiniMap/MiniMap";
+import SearchBar from "./components/SearchBar/SearchBar";
 import scenes from "./data/scenes";
 import "./App.css";
 import { FLOOR_MAPS, BUILDING_MAPS } from "./data/floors";
@@ -12,13 +13,16 @@ function App() {
   const [sceneId, setSceneId] = useState("1"); // Current Scene(Starting at Scene ID 1)
   const [view, setView] = useState("map"); // Starting View("tour" or "map")
   const [floor, setFloor] = useState(1); // Current Floor(Starting at Floor 1)
+  const [mapBuilding, setMapBuilding] = useState("Outside");
   const [selectedInfo, setSelectedInfo] = useState(null);
+  const [devMode, setDevMode] = useState(false);
   const info = selectedInfo?.sceneId === sceneId ? selectedInfo : null;
   // Identify the active scene's building
   const currentBuilding = scenes[sceneId]?.building;
+  const activeMapBuilding = view === "map" ? mapBuilding : currentBuilding;
 
   // Select the appropriate floor map
-  const mapSrc = BUILDING_MAPS[currentBuilding]?.[floor] || FLOOR_MAPS[floor];
+  const mapSrc = BUILDING_MAPS[activeMapBuilding]?.[floor] || FLOOR_MAPS[floor];
 
   // Load Floor Maps on component startup
   useEffect(() => {
@@ -51,24 +55,35 @@ function App() {
 
         {/* Tour/Map Buttons */}
         <ButtonGroup size="sm">
+          {import.meta.env.DEV && (
+            <Button
+              variant={devMode ? "warning" : "outline-light"}
+              onClick={() => setDevMode((prev) => !prev)}
+            >
+              {devMode ? "Dev Mode: ON" : "Dev Mode: OFF"}
+            </Button>
+          )}
           <Button
             variant={view === "map" ? "light" : "outline-light"}
-            onClick={() => setView("map")}
+            onClick={() => {
+              setMapBuilding("Outside");
+              setView("map");
+            }}
           >
-            {" "}
-            Map{" "}
+            Map
           </Button>
+
           <Button
             variant={view === "tour" ? "light" : "outline-light"}
             onClick={() => setView("tour")}
           >
-            {" "}
-            Tour{" "}
+            Tour
           </Button>
         </ButtonGroup>
       </header>
 
       {/* Main Content(Tour/Map) */}
+
       <main className="stage">
         {view === "tour" ? (
           <>
@@ -79,7 +94,9 @@ function App() {
                 onInfoClick={setSelectedInfo}
               />
             </div>
+
             <InfoCard scene={scenes[sceneId]} info={info} />
+
             <MiniMap
               scenes={scenes}
               floor={floor}
@@ -88,19 +105,23 @@ function App() {
               onFloorChange={setFloor}
               startingSceneID={sceneId}
               onPinClick={goToScene}
+              devMode={devMode}
             />
           </>
         ) : (
           <MapViewer
             scenes={scenes}
             floor={floor}
-            building={currentBuilding}
+            building={activeMapBuilding}
             mapSrc={mapSrc}
             onFloorChange={setFloor}
             startingSceneID={sceneId}
             onPinClick={goToScene}
+            devMode={devMode}
           />
         )}
+
+        <SearchBar scenes={scenes} onSelect={goToScene} />
       </main>
     </div>
   );

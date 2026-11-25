@@ -2,6 +2,7 @@ import "../../pins.css";
 
 const sr5Floor1 = {
   "S51": {
+    sceneType: "navigation",
     title: "S51",
     description: "",
     panorama: "/panoramas/SR5/Floor1/B5-GF-NAV01.jpg",
@@ -9,6 +10,7 @@ const sr5Floor1 = {
     yaw: 0,
     floor: 1,
     map: { x: 65, y: 8.9 },
+    buildingMap: { x: 16.4, y: 79.7 },
     hotSpots: [
       {
         type: "scene",

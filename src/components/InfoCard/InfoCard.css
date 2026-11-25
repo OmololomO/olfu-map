@@ -1,0 +1,29 @@
+
+/* Location Information Card */
+.info-card {
+  position: absolute;
+  top: 76px;
+  left: 12px;
+  width: 280px;
+  max-width: calc(100% - 90px);
+  background: rgba(255, 255, 255, 0.96);
+  border: 2px solid var(--olfu-green);
+  border-radius: 12px;
+  padding: 14px 16px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+  z-index: 5;
+}
+
+.info-card h2 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0 0 6px;
+  color: #176b38;
+}
+
+.info-card p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+  color: #444;
+}

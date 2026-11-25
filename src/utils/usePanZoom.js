@@ -45,8 +45,10 @@ const clamp = (value, low, high) => Math.min(high, Math.max(low, value));
 export default function usePanZoom({
   zoomOutLimit = 1,
   zoomInLimit = 8,
-  startZoom = 2,
+  startZoom = 1.5,
   centeredPin = null,
+  savedCenter = null,
+  centerKey = null,
   panLimit = "fill-window",
 } = {}) {
   const viewportRef = useRef(null);
@@ -250,10 +252,26 @@ export default function usePanZoom({
     return () => observer.disconnect();
   }, []);
 
-  // Move to the new spot when centeredPin changes (for example, the scene changed)
-  useEffect(() => {
-    setView((v) => ({ ...v, centerX: targetX, centerY: targetY }));
-  }, [targetX, targetY]);
+//* Restore the saved position when switching floors.
+//* Otherwise, center on the selected scene.
+const previousCenterKey = useRef(centerKey);
+
+useEffect(() => {
+  const floorChanged = previousCenterKey.current !== centerKey;
+
+  previousCenterKey.current = centerKey;
+
+  const nextCenter =
+    floorChanged && savedCenter
+      ? savedCenter
+      : { centerX: targetX, centerY: targetY };
+
+  setView((v) => ({
+    ...v,
+    centerX: nextCenter.centerX,
+    centerY: nextCenter.centerY,
+  }));
+}, [centerKey, savedCenter, targetX, targetY]);
 
   // Stop the animations if the component goes away
   useEffect(

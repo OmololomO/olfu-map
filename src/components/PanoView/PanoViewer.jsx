@@ -1,14 +1,13 @@
 import { useEffect, useRef } from "react";
-import scenes from "../data/scenes";
+import scenes from "../../data/scenes";
 import "./PanoViewer.css";
-import withInfoHandlers from "../utils/withInfoHandlers";
-
+import withInfoHandlers from "../../utils/withInfoHandlers";
 
 export default function PanoViewer({ sceneId, onSceneChange, onInfoClick }) {
   const containerRef = useRef(null);
   const viewerRef = useRef(null);
   const infoClickRef = useRef(onInfoClick);
-  
+
   useEffect(() => {
     infoClickRef.current = onInfoClick;
   });
@@ -34,6 +33,15 @@ export default function PanoViewer({ sceneId, onSceneChange, onInfoClick }) {
         scenes: withInfoHandlers(scenes, (info) => infoClickRef.current(info)),
       });
       viewer.on("scenechange", onSceneChange);
+      const panoElement = containerRef.current;
+
+      panoElement.addEventListener("mousedown", () => {
+        panoElement.style.cursor = "move";
+      });
+
+      window.addEventListener("mouseup", () => {
+        panoElement.style.cursor = "";
+      });
       viewer.on("error", (msg) => console.error("Pannellum error:", msg));
       viewerRef.current = viewer;
     }, 0);
@@ -58,7 +66,6 @@ export default function PanoViewer({ sceneId, onSceneChange, onInfoClick }) {
     if (viewer) viewer.setHfov(viewer.getHfov() + delta, 300);
   }
 
-
   return (
     <div className="pano-viewer">
       <div className="pano-zoom">
@@ -69,5 +76,4 @@ export default function PanoViewer({ sceneId, onSceneChange, onInfoClick }) {
       <div ref={containerRef} style={{ width: "100%", height: "100%" }} />
     </div>
   );
-
 }

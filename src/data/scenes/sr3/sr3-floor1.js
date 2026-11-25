@@ -2,13 +2,15 @@ import "../../pins.css";
 
 const sr3Floor1 = {
     "B3-GF-AUDI": {
-    title: "B3-GF-AUDI",
+    sceneType: "room",
+    title: "Auditorium",
     description: "",
     panorama: "/panoramas/SR3/Floor1/B3-GF-AUDI.jpg",
     pitch: 0,
     yaw: 0,
     floor: 1,
     map: { x: 72.8, y: 39.6 },
+    buildingMap: { x: 36.4, y: 23.0 },
     hotSpots: [
       {
         type: "scene",
@@ -44,6 +46,7 @@ const sr3Floor1 = {
   },
 
   "S31": {
+    sceneType: "navigation",
     title: "S31",
     description: "",
     panorama: "/panoramas/SR3/Floor1/S31.jpg",
@@ -51,6 +54,7 @@ const sr3Floor1 = {
     yaw: 0,
     floor: 1,
     map: { x: 62.8, y: 44.2 },
+    buildingMap: { x: 9.7, y: 63.4 },
     hotSpots: [
       {
         type: "scene",
@@ -86,6 +90,7 @@ const sr3Floor1 = {
   },
 
   "S32": {
+    sceneType: "navigation",
     title: "S32",
     description: "",
     panorama: "/panoramas/SR3/Floor1/S32.jpg",
@@ -93,6 +98,7 @@ const sr3Floor1 = {
     yaw: 0,
     floor: 1,
     map: { x: 66.8, y: 42.75 },
+    buildingMap: { x: 21.6, y: 49.8 },
     hotSpots: [
       {
         type: "scene",
@@ -118,6 +124,7 @@ const sr3Floor1 = {
   },
 
   "S33": {
+    sceneType: "navigation",
     title: "S33",
     description: "",
     panorama: "/panoramas/SR3/Floor1/S33.jpg",
@@ -125,6 +132,7 @@ const sr3Floor1 = {
     yaw: 0,
     floor: 1,
     map: { x: 71, y: 42.75 },
+    buildingMap: { x: 33.3, y: 49.8 },
     hotSpots: [
       {
         type: "scene",
@@ -160,6 +168,7 @@ const sr3Floor1 = {
   },
 
   "S34": {
+    sceneType: "navigation",
     title: "S34",
     description: "",
     panorama: "/panoramas/SR3/Floor1/S34.jpg",
@@ -167,6 +176,7 @@ const sr3Floor1 = {
     yaw: 0,
     floor: 1,
     map: { x: 75.7, y: 42.75 },
+    buildingMap: { x: 46, y: 49.8 },
     hotSpots: [
       {
         type: "scene",
@@ -202,6 +212,7 @@ const sr3Floor1 = {
   },
 
   "S35": {
+    sceneType: "navigation",
     title: "S35",
     description: "",
     panorama: "/panoramas/SR3/Floor1/S35.jpg",
@@ -209,6 +220,7 @@ const sr3Floor1 = {
     yaw: 0,
     floor: 1,
     map: { x: 79, y: 42.75 },
+    buildingMap: { x: 54.7, y: 49.8 },
     hotSpots: [
       {
         type: "scene",
@@ -244,6 +256,7 @@ const sr3Floor1 = {
   },
 
   "S36": {
+    sceneType: "navigation",
     title: "S36",
     description: "",
     panorama: "/panoramas/SR3/Floor1/S36.jpg",
@@ -251,6 +264,7 @@ const sr3Floor1 = {
     yaw: 0,
     floor: 1,
     map: { x: 84.4, y: 42.75 },
+    buildingMap: { x: 69.5, y: 49.8 },
     hotSpots: [
       {
         type: "scene",
@@ -276,6 +290,7 @@ const sr3Floor1 = {
   },
 
   "S37": {
+    sceneType: "navigation",
     title: "S37",
     description: "",
     panorama: "/panoramas/SR3/Floor1/S37.jpg",
@@ -283,6 +298,7 @@ const sr3Floor1 = {
     yaw: 0,
     floor: 1,
     map: { x: 87.5, y: 42.75 },
+    buildingMap: { x: 78, y: 49.8 },
     hotSpots: [
       {
         type: "scene",
@@ -318,6 +334,7 @@ const sr3Floor1 = {
   },
 
   "S38": {
+    sceneType: "navigation",
     title: "S38",
     description: "",
     panorama: "/panoramas/SR3/Floor1/S38.jpg",
@@ -325,6 +342,7 @@ const sr3Floor1 = {
     yaw: 0,
     floor: 1,
     map: { x: 92.9, y: 42.75 },
+    buildingMap: { x: 93.3, y: 49.8 },
     hotSpots: [
       {
         type: "scene",
@@ -340,6 +358,7 @@ const sr3Floor1 = {
   },
 
   "S39": {
+    sceneType: "navigation",
     title: "S39",
     description: "",
     panorama: "/panoramas/SR3/Floor1/S39.jpg",
@@ -347,6 +366,7 @@ const sr3Floor1 = {
     yaw: 0,
     floor: 1,
     map: { x: 87.5, y: 45.2 },
+    buildingMap: { x: 78, y: 70.4 },
     hotSpots: [
       {
         type: "scene",

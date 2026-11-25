@@ -2,13 +2,15 @@ import "../../pins.css";
 
 const sr4Floor1 = {
       "S41": {
-    title: "S41",
+    sceneType: "facility",
+    title: "SR4 Library",
     description: "",
     panorama: "/panoramas/SR4/Floor1/B4-GF-LRC-NAV01.jpg",
     pitch: 0,
     yaw: 0,
     floor: 1,
     map: { x: 87.6, y: 26.3 },
+    buildingMap: { x: 65.8, y: 61.8 },
     hotSpots: [
       {
         type: "scene",
@@ -44,13 +46,15 @@ const sr4Floor1 = {
   },
 
   "S42": {
-    title: "S42",
+    sceneType: "facility",
+    title: "SR4 Library",
     description: "",
     panorama: "/panoramas/SR4/Floor1/B4-GF-LRC-NAV02.jpg",
     pitch: 0,
     yaw: 0,
     floor: 1,
     map: { x: 92.8, y: 27.9 },
+    buildingMap: { x: 74.9, y: 24.9 },
     hotSpots: [
       {
         type: "scene",
@@ -86,6 +90,7 @@ const sr4Floor1 = {
   },
 
   "S43": {
+    sceneType: "navigation",
     title: "S43",
     description: "",
     panorama: "/panoramas/SR4/Floor1/B4-GF-NAV01.jpg",
@@ -93,6 +98,7 @@ const sr4Floor1 = {
     yaw: 0,
     floor: 1,
     map: { x: 86.7, y: 22.3 },
+    buildingMap: { x: 44.9, y: 69.2 },
     hotSpots: [
       {
         type: "scene",

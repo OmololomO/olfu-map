@@ -39,3 +39,10 @@
 .pnlm-about-msg {
     display: none !important;
 }
+
+.pnlm-dragfix {
+  cursor: pointer;
+}
+.pnlm-dragfix:active {
+  cursor: move;
+}

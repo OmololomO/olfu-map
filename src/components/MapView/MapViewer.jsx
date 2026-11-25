@@ -1,8 +1,8 @@
-import usePanZoom from "../utils/usePanZoom";
-import MapPins from "./MapPins";
+import usePanZoom from "../../utils/usePanZoom";
+import MapPins from "../MapPins/MapPins";
 import "./MapViewer.css";
-import FloorControls from "./FloorControls";
-import { FLOORS, FLOOR_MAPS } from "../data/floors";
+import FloorControls from "../FloorControls/FloorControls";
+import { FLOORS, FLOOR_MAPS, BUILDING_MAPS } from "../../data/floors";
 
 export default function MapViewer({
   scenes,
@@ -11,6 +11,7 @@ export default function MapViewer({
   onFloorChange,
   startingSceneID,
   onPinClick,
+  devMode,
   mapSrc = FLOOR_MAPS[floor],
 }) {
   const { viewportRef, contentRef, contentStyle, view, dragged, bind, zoomBy } =
@@ -21,6 +22,10 @@ export default function MapViewer({
       panLimit: "to-center",
       centeredPin: scenes[startingSceneID]?.map,
     });
+
+  const availableFloors = BUILDING_MAPS[building]
+    ? Object.keys(BUILDING_MAPS[building]).map(Number)
+    : FLOORS;
 
   return (
     <div className="map-viewer">
@@ -49,6 +54,7 @@ export default function MapViewer({
             dragged={dragged}
             onPinClick={onPinClick}
             showLabels
+            devMode={devMode}
           />
         </div>
       </div>
@@ -60,7 +66,7 @@ export default function MapViewer({
 
       <div className="map-floor-controls">
         <FloorControls
-          floors={FLOORS}
+          floors={availableFloors}
           currentFloor={floor}
           onChange={onFloorChange}
         />

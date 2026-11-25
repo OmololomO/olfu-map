@@ -2,6 +2,7 @@ import "../../pins.css";
 
 const sr1Floor1 = {
   "S1A": {
+    sceneType: "navigation",
     title: "S1A",
     description: "",
     panorama: "panoramas/SR1/Floor1/OUTSIDE_MAINPATHWAY_NAV04.jpg",
@@ -35,6 +36,7 @@ const sr1Floor1 = {
   },
 
   "S1B": {
+    sceneType: "navigation",
     title: "S1B",
     description: "",
     panorama: "panoramas/SR1/Floor1/OUTSIDE_MAINPATHWAY_NAV05.jpg",
@@ -78,6 +80,7 @@ const sr1Floor1 = {
   },
 
   "S1C": {
+    sceneType: "navigation",
     title: "S1C",
     description: "",
     panorama: "panoramas/SR1/Floor1/OUTSIDE_MAINPATHWAY_NAV06.jpg",

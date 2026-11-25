@@ -2,6 +2,7 @@ import "../../pins.css";
 
 const sr2Floor5 = {
   "B2-F5-NAV-01": {
+    sceneType: "navigation",
     title: "B2-F5-NAV-01",
     description: "",
     panorama: "/panoramas/SR2/Floor5/B2-F5-NAV-01.jpg",
@@ -9,6 +10,7 @@ const sr2Floor5 = {
     yaw: 87,
     floor: 5,
     map: { x: 93.5, y: 54.9 },
+    buildingMap: { x: 95.9, y: 30.8 },
     hotSpots: [
       {
         type: "scene",
@@ -34,6 +36,7 @@ const sr2Floor5 = {
   },
   
   "B2-F5-NAV-02": {
+    sceneType: "navigation",
     title: "B2-F5-NAV-02",
     description: "",
     panorama: "/panoramas/SR2/Floor5/B2-F5-NAV-02.jpg",
@@ -41,6 +44,7 @@ const sr2Floor5 = {
     yaw: 177,
     floor: 5,
     map: { x: 86.4, y: 54.9 },
+    buildingMap: { x: 77.6, y: 30.8 },
     hotSpots: [
       {
         type: "scene",
@@ -76,6 +80,7 @@ const sr2Floor5 = {
   },
 
   "B2-F5-NAV-03": {
+    sceneType: "navigation",
     title: "B2-F5-NAV-03",
     description: "",
     panorama: "/panoramas/SR2/Floor5/B2-F5-NAV-03.jpg",
@@ -83,6 +88,7 @@ const sr2Floor5 = {
     yaw: 177,
     floor: 5,
     map: { x: 82, y: 55.0 },
+    buildingMap: { x: 64.5, y: 30.8 },
     hotSpots: [
       {
         type: "scene",
@@ -108,6 +114,7 @@ const sr2Floor5 = {
   },
 
   "B2-F5-NAV-04": {
+    sceneType: "navigation",
     title: "B2-F5-NAV-04",
     description: "",
     panorama: "/panoramas/SR2/Floor5/B2-F5-NAV-04.jpg",
@@ -115,6 +122,7 @@ const sr2Floor5 = {
     yaw: 177,
     floor: 5,
     map: { x: 72, y: 55.0 },
+    buildingMap: { x: 38.5, y: 30.8 },
     hotSpots: [
       {
         type: "scene",
@@ -140,6 +148,7 @@ const sr2Floor5 = {
   },
 
   "B2-F5-NAV-05": {
+    sceneType: "navigation",
     title: "B2-F5-NAV-05",
     description: "",
     panorama: "/panoramas/SR2/Floor5/B2-F5-NAV-05.jpg",
@@ -147,6 +156,7 @@ const sr2Floor5 = {
     yaw: 0,
     floor: 5,
     map: { x: 59.3, y: 55.0 },
+    buildingMap: { x: 3.8, y: 30.8 }, 
     hotSpots: [
       {
         type: "scene",
@@ -172,6 +182,7 @@ const sr2Floor5 = {
   },
 
   "B2-F5-NAV-06": {
+    sceneType: "navigation",
     title: "B2-F5-NAV-06",
     description: "",
     panorama: "/panoramas/SR2/Floor5/B2-F5-NAV-06.jpg",
@@ -179,6 +190,7 @@ const sr2Floor5 = {
     yaw: 177,
     floor: 5,
     map: { x: 89.9, y: 56.0 },
+    buildingMap: { x: 86.5, y: 39.4 },
     hotSpots: [
       {
         type: "scene",
@@ -214,6 +226,7 @@ const sr2Floor5 = {
   },
 
   "B2-F5-NAV-07": {
+    sceneType: "navigation",
     title: "B2-F5-NAV-07",
     description: "",
     panorama: "/panoramas/SR2/Floor5/B2-F5-NAV-07.jpg",
@@ -221,6 +234,7 @@ const sr2Floor5 = {
     yaw: 0,
     floor: 5,
     map: { x: 89.9, y: 59.7 },
+    buildingMap: { x: 86.5, y: 71.4 },
     hotSpots: [
       {
         type: "scene",

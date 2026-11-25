@@ -2,13 +2,15 @@ import "../../pins.css";
 
 const sr2Floor1 = {
   "B2-F1-FAC-01": {
-    title: "B2-F1-FAC-01",
+    sceneType: "facility",
+    title: "SR2 Library",
     description: "",
     panorama: "/panoramas/SR2/Floor1/B2-F1-FAC-01.jpg",
     pitch: 0,
     yaw: 0,
     floor: 1,
     map: { x: 86.4, y: 52.6 },
+    buildingMap: { x: 77.9, y: 11.3 },
     hotSpots: [
       {
         type: "scene",
@@ -52,13 +54,15 @@ const sr2Floor1 = {
   },
 
   "B2-F1-FAC-06": {
-    title: "B2-F1-FAC-06",
+    sceneType: "facility",
+    title: "SR2 Library",
     description: "",
     panorama: "/panoramas/SR2/Floor1/B2-F1-FAC-06.jpg",
     pitch: 0,
     yaw: 0,
     floor: 1,
     map: { x: 66.8, y: 52.6 },
+    buildingMap: { x: 25.1, y: 11.0 },
     hotSpots: [
       {
         type: "scene",
@@ -94,6 +98,7 @@ const sr2Floor1 = {
   },
 
   "B2-F1-NAV-01": {
+    sceneType: "navigation",
     title: "B2-F1-NAV-01",
     description: "",
     panorama: "/panoramas/SR2/Floor1/B2-F1-NAV-01.jpg",
@@ -101,6 +106,7 @@ const sr2Floor1 = {
     yaw: -94,
     floor: 1,
     map: { x: 84.2, y: 56.81 },
+    buildingMap: { x: 71.2, y: 46.1 },
     hotSpots: [
       {
         type: "scene",
@@ -156,6 +162,7 @@ const sr2Floor1 = {
   },
 
   "B2-F1-NAV-02": {
+    sceneType: "navigation",
     title: "B2-F1-NAV-02",
     description: "",
     panorama: "/panoramas/SR2/Floor1/B2-F1-NAV-02.jpg",
@@ -163,6 +170,7 @@ const sr2Floor1 = {
     yaw: 0,
     floor: 1,
     map: { x: 89.9, y: 56.81 },
+    buildingMap: { x: 87.2, y: 45.4 },
     hotSpots: [
       {
         type: "scene",
@@ -218,6 +226,7 @@ const sr2Floor1 = {
   },
 
   "B2-F1-NAV-03": {
+    sceneType: "navigation",
     title: "B2-F1-NAV-03",
     description: "",
     panorama: "/panoramas/SR2/Floor1/B2-F1-NAV-03.jpg",
@@ -225,6 +234,7 @@ const sr2Floor1 = {
     yaw: -180,
     floor: 1,
     map: { x: 93.1, y: 55.0 },
+    buildingMap: { x: 96.2, y: 29.5 },
     hotSpots: [
       {
         type: "scene",
@@ -250,6 +260,7 @@ const sr2Floor1 = {
   },
 
   "B2-F1-NAV-04": {
+    sceneType: "navigation",
     title: "B2-F1-NAV-04",
     description: "",
     panorama: "/panoramas/SR2/Floor1/B2-F1-NAV-04.jpg",
@@ -257,6 +268,7 @@ const sr2Floor1 = {
     yaw: 174,
     floor: 1,
     map: { x: 89.9, y: 59.9 },
+    buildingMap: { x: 87.2, y: 69.2 },
     hotSpots: [
       {
         type: "scene",
@@ -302,6 +314,7 @@ const sr2Floor1 = {
   },
 
   "B2-F1-NAV-05": {
+    sceneType: "navigation",
     title: "B2-F1-NAV-05",
     description: "",
     panorama: "/panoramas/SR2/Floor1/B2-F1-NAV-05.jpg",
@@ -309,6 +322,7 @@ const sr2Floor1 = {
     yaw: 177,
     floor: 1,
     map: { x: 58.6, y: 54.9 },
+    buildingMap: { x: 4.0, y: 30.6 },
     hotSpots: [
       {
         type: "scene",
