@@ -304,11 +304,19 @@ const sr2Floor1 = {
       // Info Pins
       {
         type: "info",
-        text: "Bathroom",
-        cssClass: "hotspot-pin bathroom",
-        pitch: -3,
-        yaw: -163.5,
-        description: "This is the bathroom",
+        text: "Men's Restrooms",
+        cssClass: "hotspot-pin men-restroom",
+        pitch: -2.9,
+        yaw: 194.5,
+        description: "Public restroom facility designated for men.",
+      },
+      {
+        type: "info",
+        text: "Women's Restrooms",
+        cssClass: "hotspot-pin women-restroom",
+        pitch: -2.9,
+        yaw: 200.8,
+        description: "Public restroom facility designated for women.",
       },
     ],
   },
@@ -323,7 +331,7 @@ const sr2Floor1 = {
     floor: 1,
     map: { x: 58.6, y: 54.9 },
     buildingMap: { x: 4.0, y: 30.6 },
-    hotSpots: [
+hotSpots: [
       {
         type: "scene",
         text: "Enter Library",

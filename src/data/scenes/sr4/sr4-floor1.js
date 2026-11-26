@@ -130,6 +130,32 @@ const sr4Floor1 = {
         targetPitch: 0,
         targetYaw: 0,
       },
+
+      // Info Pins
+      {
+        type: "info",
+        text: "Classroom 101",
+        cssClass: "hotspot-pin info",
+        pitch: -3.5,
+        yaw: 222.7,
+        description: "",
+      },
+      {
+        type: "info",
+        text: "Classroom 102",
+        cssClass: "hotspot-pin info",
+        pitch: -5.8,
+        yaw: 151.3,
+        description: "",
+      },
+      {
+        type: "info",
+        text: "Classroom 103",
+        cssClass: "hotspot-pin info",
+        pitch: -3,
+        yaw: 117.9,
+        description: "",
+      },
     ],
   },
  

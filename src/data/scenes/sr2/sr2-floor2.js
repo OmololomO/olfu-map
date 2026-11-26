@@ -32,6 +32,16 @@ const sr2Floor2 = {
         targetPitch: 0,
         targetYaw: 178,
       },
+
+      // Info Pins
+      {
+        type: "info",
+        text: "Elevator",
+        cssClass: "hotspot-pin elevator",
+        pitch: -7.4,
+        yaw: 176,
+        description: "",
+      },
     ],
   },
   
@@ -76,6 +86,24 @@ const sr2Floor2 = {
         targetPitch: -4.5,
         targetYaw: 266,
       },
+
+      // Info Pins
+      {
+        type: "info",
+        text: "SR2 Room 203 / Lecture & Demonstration Room B",
+        cssClass: "hotspot-pin info",
+        pitch: -7.3,
+        yaw: 49,
+        description: "",
+      },
+      {
+        type: "info",
+        text: "SR2 Room 203 / Lecture & Demonstration Room B",
+        cssClass: "hotspot-pin info",
+        pitch: -6,
+        yaw: -66,
+        description: "",
+      },
     ],
   },
 
@@ -110,6 +138,33 @@ const sr2Floor2 = {
         targetPitch: -4,
         targetYaw: 267,
       },
+
+      // Info Pins
+      {
+        type: "info",
+        text: "Faculty Room",
+        cssClass: "hotspot-pin info",
+        pitch: -6,
+        yaw: 102.5,
+        description: "",
+      },
+      {
+        type: "info",
+        text: "Virtual Labratory",
+        cssClass: "hotspot-pin info",
+        pitch: -7.7,
+        yaw: 39.4,
+        description: "",
+      },
+      {
+        type: "info",
+        text: "Virtual Labratory",
+        cssClass: "hotspot-pin info",
+        pitch: -6,
+        yaw: -55.7,
+        description: "",
+      },
+      
     ],
   },
 
@@ -143,6 +198,24 @@ const sr2Floor2 = {
         sceneId: "B2-F2-NAV-05",
         targetPitch: 0,
         targetYaw: 178,
+      },
+
+      // Info Pins
+      {
+        type: "info",
+        text: "SR2 Room 201 / Lecture & Demonstration Room A",
+        cssClass: "hotspot-pin info",
+        pitch: -6,
+        yaw: 42.6,
+        description: "",
+      },
+      {
+        type: "info",
+        text: "SR2 Room 201 / Lecture & Demonstration Room A",
+        cssClass: "hotspot-pin info",
+        pitch: -5,
+        yaw: -52.4,
+        description: "",
       },
     ],
   },
@@ -295,6 +368,32 @@ const sr2Floor2 = {
         sceneId: "B2-F1-NAV-04",
         targetPitch: -3,
         targetYaw: 87,
+      },
+
+      // Info Pins
+      {
+        type: "info",
+        text: "Men's Restrooms",
+        cssClass: "hotspot-pin men-restroom",
+        pitch: -1.9,
+        yaw: 101.9,
+        description: "",
+      },
+      {
+        type: "info",
+        text: "Women's Restrooms",
+        cssClass: "hotspot-pin women-restroom",
+        pitch: -2.4,
+        yaw: 108.3,
+        description: "",
+      },
+      {
+        type: "info",
+        text: "SR2 Room 204 / Nursing Skills Lab 1",
+        cssClass: "hotspot-pin info",
+        pitch: -13.4,
+        yaw: 222,
+        description: "",
       },
     ],
   },

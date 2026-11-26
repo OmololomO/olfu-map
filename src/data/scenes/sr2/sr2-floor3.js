@@ -32,6 +32,32 @@ const sr2Floor3 = {
         targetPitch: 0,
         targetYaw: 269,
       },
+
+      // Info Pins
+      {
+        type: "info",
+        text: "Elevator",
+        cssClass: "hotspot-pin elevator",
+        pitch: -6,
+        yaw: 262,
+        description: "",
+      },
+      {
+        type: "info",
+        text: "SR2 Room 303 / Anatomy & Physiology Labratory 2",
+        cssClass: "hotspot-pin info",
+        pitch: -6,
+        yaw: 108,
+        description: "",
+      },
+      {
+        type: "info",
+        text: "Nursing Skills Lab 4",
+        cssClass: "hotspot-pin info",
+        pitch: -4.6,
+        yaw: 14.3,
+        description: "",
+      },
     ],
   },
   
@@ -76,6 +102,32 @@ const sr2Floor3 = {
         targetPitch: -1.5,
         targetYaw: 266,
       },
+
+      // Info Pins
+      {
+        type: "info",
+        text: "SR2 Room 304 / Chemical Labratory 1",
+        cssClass: "hotspot-pin info",
+        pitch: -4.8,
+        yaw: 108,
+        description: "",
+      },
+      {
+        type: "info",
+        text: "SR2 Room 304 / Chemical Labratory 1",
+        cssClass: "hotspot-pin info",
+        pitch: -5.8,
+        yaw: 223.8,
+        description: "",
+      },
+      {
+        type: "info",
+        text: "SR2 Room 305 / Chemical Labratory 2",
+        cssClass: "hotspot-pin info",
+        pitch: -5,
+        yaw: -118.4,
+        description: "",
+      },
     ],
   },
 
@@ -109,6 +161,40 @@ const sr2Floor3 = {
         sceneId: "B2-F3-NAV-04",
         targetPitch: -1,
         targetYaw: 358,
+      },
+
+      // Info Pins
+      {
+        type: "info",
+        text: "SR2 Room 305 / Chemical Labratory 2",
+        cssClass: "hotspot-pin info",
+        pitch: -1.8,
+        yaw: 100.4,
+        description: "",
+      },
+      {
+        type: "info",
+        text: "SR2 Room 305 / Chemical Labratory 2",
+        cssClass: "hotspot-pin info",
+        pitch: -5.8,
+        yaw: 185.9,
+        description: "",
+      },
+      {
+        type: "info",
+        text: "Meeting Room",
+        cssClass: "hotspot-pin info",
+        pitch: -1.5,
+        yaw: 57.9,
+        description: "",
+      },
+      {
+        type: "info",
+        text: "Faculty Room",
+        cssClass: "hotspot-pin info",
+        pitch: -2,
+        yaw: -69,
+        description: "",
       },
     ],
   },
@@ -144,6 +230,24 @@ const sr2Floor3 = {
         targetPitch: -1.5,
         targetYaw: -1,
       },
+
+      // Info Pins
+      {
+        type: "info",
+        text: "SR2 Room 301 / Physiology Labratory 2",
+        cssClass: "hotspot-pin info",
+        pitch: -4.8,
+        yaw: 47,
+        description: "",
+      },
+      {
+        type: "info",
+        text: "Chemical Storage Room",
+        cssClass: "hotspot-pin info",
+        pitch: -4.3,
+        yaw: 125.9,
+        description: "",
+      },
     ],
   },
 
@@ -177,6 +281,16 @@ const sr2Floor3 = {
         sceneId: "B2-F3-NAV-06",
         targetPitch: -0.5,
         targetYaw: 180,
+      },
+
+      // Info Pins
+      {
+        type: "info",
+        text: "Nursing Skills Lab 3",
+        cssClass: "hotspot-pin info",
+        pitch: -13.4,
+        yaw: 92.9,
+        description: "",
       },
     ],
   },
@@ -266,6 +380,16 @@ const sr2Floor3 = {
         targetPitch: -3,
         targetYaw: 176.5,
       },
+
+      // Info Pins
+      {
+        type: "info",
+        text: "Nursing Skills Lab 4",
+        cssClass: "hotspot-pin info",
+        pitch: -4.8,
+        yaw: 86.4,
+        description: "",
+      },
     ],
   },
 
@@ -329,6 +453,24 @@ const sr2Floor3 = {
         sceneId: "B2-F2-NAV-07",
         targetPitch: 0,
         targetYaw: 0,
+      },
+
+      // Info Pins
+       {
+        type: "info",
+        text: "Men's Restrooms",
+        cssClass: "hotspot-pin men-restroom",
+        pitch: -1,
+        yaw: 106.9,
+        description: "",
+      },
+      {
+        type: "info",
+        text: "Women's Restrooms",
+        cssClass: "hotspot-pin women-restroom",
+        pitch: -1.5,
+        yaw: 113.8,
+        description: "",
       },
     ],
   },

@@ -32,6 +32,16 @@ const sr1Floor1 = {
         targetPitch: 4,
         targetYaw: 187,
       },
+
+      // Info Pins
+      {
+        type: "info",
+        text: "Admission Office",
+        cssClass: "hotspot-pin info",
+        pitch: -0,
+        yaw: 126,
+        description: "",
+      },
     ],
   },
 
@@ -76,6 +86,40 @@ const sr1Floor1 = {
         targetPitch: 1,
         targetYaw: 185,
       },
+
+      // Info Pins
+      {
+        type: "info",
+        text: "Elevator",
+        cssClass: "hotspot-pin elevator",
+        pitch: 1,
+        yaw: 64,
+        description: "",
+      },
+       {
+        type: "info",
+        text: "Men'sRestrooms",
+        cssClass: "hotspot-pin men-restroom",
+        pitch: 3.3,
+        yaw: 179,
+        description: "",
+      },
+      {
+        type: "info",
+        text: "Women's Restrooms",
+        cssClass: "hotspot-pin women-restroom",
+        pitch: 2.9,
+        yaw: 175.3,
+        description: "",
+      },
+      {
+        type: "info",
+        text: "Human Resource Office",
+        cssClass: "hotspot-pin info",
+        pitch: 1.6,
+        yaw: 249,
+        description: "",
+      },
     ],
   },
 
@@ -119,6 +163,40 @@ const sr1Floor1 = {
         sceneId: "AAAA",
         targetPitch: 2,
         targetYaw: 91,
+      },
+
+      // Info Pins
+      {
+        type: "info",
+        text: "Campus Admin Office",
+        cssClass: "hotspot-pin info",
+        pitch: 3.5,
+        yaw: 17.3,
+        description: "",
+      },
+      {
+        type: "info",
+        text: "Registrars Office",
+        cssClass: "hotspot-pin info",
+        pitch: 3.7,
+        yaw: 300.8,
+        description: "",
+      },
+      {
+        type: "info",
+        text: "Student Financial Service",
+        cssClass: "hotspot-pin info",
+        pitch: 3,
+        yaw: 110.4,
+        description: "",
+      },
+      {
+        type: "info",
+        text: "Student Financial Service",
+        cssClass: "hotspot-pin info",
+        pitch: 3.9,
+        yaw: 252,
+        description: "",
       },
     ],
   },

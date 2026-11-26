@@ -32,6 +32,16 @@ const sr2Floor5 = {
         targetPitch: -2.5,
         targetYaw: 355,
       },
+      
+      // Info Pins
+      {
+        type: "info",
+        text: "Elevator",
+        cssClass: "hotspot-pin elevator",
+        pitch: -7,
+        yaw: -3.8,
+        description: "",
+      },
     ],
   },
   
@@ -110,6 +120,33 @@ const sr2Floor5 = {
         targetPitch: -2,
         targetYaw: -2,
       },
+
+      // Info Pins
+      {
+        type: "info",
+        text: "Medical Technology Labratory 3",
+        cssClass: "hotspot-pin info",
+        pitch: -2.2,
+        yaw: 196.3,
+        description: "",
+      },
+      {
+        type: "info",
+        text: "Medical Technology Labratory 3",
+        cssClass: "hotspot-pin info",
+        pitch: -4.5,
+        yaw: 322,
+        description: "",
+      },
+      {
+        type: "info",
+        text: "Medical Technology Labratory 2",
+        cssClass: "hotspot-pin info",
+        pitch: -3.7,
+        yaw: 128.3,
+        description: "",
+      },
+      
     ],
   },
 
@@ -144,6 +181,24 @@ const sr2Floor5 = {
         targetPitch: 0,
         targetYaw: 178,
       },
+
+      // Info Pins
+      {
+        type: "info",
+        text: "Medical Technology Labratory 1",
+        cssClass: "hotspot-pin info",
+        pitch: -5.4,
+        yaw: 47.3,
+        description: "",
+      },
+      {
+        type: "info",
+        text: "Medical Technology Labratory 2",
+        cssClass: "hotspot-pin info",
+        pitch: -5.5,
+        yaw: 123.3,
+        description: "",
+      },
     ],
   },
 
@@ -177,6 +232,16 @@ const sr2Floor5 = {
         sceneId: "B2-F4-NAV-07",
         targetPitch: 0,
         targetYaw: 178,
+      },
+
+      // Info Pins
+      {
+        type: "info",
+        text: "Medical Technology Labratory 1",
+        cssClass: "hotspot-pin info",
+        pitch: -1.8,
+        yaw: 329.3,
+        description: "",
       },
     ],
   },
@@ -221,6 +286,16 @@ const sr2Floor5 = {
         sceneId: "B2-F5-NAV-02",
         targetPitch: -2.5,
         targetYaw: -5,
+      },
+
+      // Info Pins
+      {
+        type: "info",
+        text: "Medical Technology Instrumentation Room",
+        cssClass: "hotspot-pin info",
+        pitch: -4.5,
+        yaw: 15.8,
+        description: "",
       },
     ],
   },
@@ -275,6 +350,40 @@ const sr2Floor5 = {
         sceneId: "B2-F4-NAV-09",
         targetPitch: 0,
         targetYaw: 0,
+      },
+
+      // Info Pins
+       {
+        type: "info",
+        text: "Men's Restrooms",
+        cssClass: "hotspot-pin men-restroom",
+        pitch: -1.8,
+        yaw: 105.8,
+        description: "",
+      },
+      {
+        type: "info",
+        text: "Women's Restrooms",
+        cssClass: "hotspot-pin women-restroom",
+        pitch: -2.2,
+        yaw: 112.6,
+        description: "",
+      },
+      {
+        type: "info",
+        text: "Medical Technology Instrumentation Room",
+        cssClass: "hotspot-pin info",
+        pitch: -2,
+        yaw: 202.4,
+        description: "",
+      },
+      {
+        type: "info",
+        text: "Medical Technology Instrumentation Room",
+        cssClass: "hotspot-pin info",
+        pitch: -1.7,
+        yaw: 340.5,
+        description: "",
       },
     ],
   },

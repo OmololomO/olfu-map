@@ -86,6 +86,17 @@ const sr3Floor1 = {
         targetPitch: 0,
         targetYaw: -163,
       },
+
+      // Info Pins
+       {
+        type: "info",
+        text: "Men's Restrooms",
+        cssClass: "hotspot-pin men-restroom",
+        pitch: 0,
+        yaw: -143.2,
+        description: "",
+      },
+
     ],
   },
 
@@ -119,6 +130,16 @@ const sr3Floor1 = {
         sceneId: "S31",
         targetPitch: 0,
         targetYaw: 326.5,
+      },
+
+      // Info Pins
+       {
+        type: "info",
+        text: "Elevator",
+        cssClass: "hotspot-pin elevator",
+        pitch: -1.8,
+        yaw: -70.9,
+        description: "",
       },
     ],
   },
@@ -164,6 +185,24 @@ const sr3Floor1 = {
         targetPitch: 0,
         targetYaw: 0,
       },
+
+      // Info Pins
+      {
+        type: "info",
+        text: "Health & Wellness Center",
+        cssClass: "hotspot-pin info",
+        pitch: 1.8,
+        yaw: -310.9,
+        description: "",
+      },
+      {
+        type: "info",
+        text: "Discipline Office",
+        cssClass: "hotspot-pin info",
+        pitch: 0.6,
+        yaw: -135.3,
+        description: "",
+      },
     ],
   },
 
@@ -208,6 +247,24 @@ const sr3Floor1 = {
         targetPitch: 0,
         targetYaw: 0,
       },
+
+      // Info Pins
+      {
+        type: "info",
+        text: "Accreditation Room",
+        cssClass: "hotspot-pin info",
+        pitch: -1.8,
+        yaw: 236.6,
+        description: "",
+      },
+      {
+        type: "info",
+        text: "Center For Guidance Services",
+        cssClass: "hotspot-pin info",
+        pitch: -0.4,
+        yaw: 318.9,
+        description: "",
+      },
     ],
   },
 
@@ -251,6 +308,16 @@ const sr3Floor1 = {
         sceneId: "B3-GF-AUDI",
         targetPitch: 0,
         targetYaw: 0,
+      },
+
+      // Info Pins
+      {
+        type: "info",
+        text: "Program Head Office",
+        cssClass: "hotspot-pin info",
+        pitch: -2.4,
+        yaw: -82.8,
+        description: "",
       },
     ],
   },

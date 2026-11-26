@@ -58,11 +58,18 @@
   background-image: url('/public/pin_icons/stairs-down.png');
 }
 
-.bathroom {
+.men-restroom {
   background-color: #2272fe;
 }
-.bathroom::before {
-  background-image: url('/public/pin_icons/bathroom.png');
+.men-restroom::before {
+  background-image: url('/public/pin_icons/men-restroom.png');
+}
+
+.women-restroom {
+  background-color: #2272fe;
+}
+.women-restroom::before {
+  background-image: url('/public/pin_icons/women-restroom.png');
 }
 
 .corner-move::before {
